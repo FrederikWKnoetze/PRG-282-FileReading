@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Frikkie\\Documents\\GitHub\\PRG-282-FileReading\\WindowsFormsApp1\\",
+  "WorkspaceRootPath": "C:\\Users\\User-PC\\Documents\\GitHub\\PRG-282-FileReading\\WindowsFormsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{33D34BA7-6E74-40D4-938F-E741E8B136CA}|WindowsFormsApp1.csproj|c:\\users\\frikkie\\documents\\github\\prg-282-filereading\\windowsformsapp1\\data layer\\datahandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{33D34BA7-6E74-40D4-938F-E741E8B136CA}|WindowsFormsApp1.csproj|c:\\users\\user-pc\\documents\\github\\prg-282-filereading\\windowsformsapp1\\data layer\\datahandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{33D34BA7-6E74-40D4-938F-E741E8B136CA}|WindowsFormsApp1.csproj|solutionrelative:data layer\\datahandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{33D34BA7-6E74-40D4-938F-E741E8B136CA}|WindowsFormsApp1.csproj|C:\\Users\\Frikkie\\Documents\\GitHub\\PRG-282-FileReading\\WindowsFormsApp1\\presentation layer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{33D34BA7-6E74-40D4-938F-E741E8B136CA}|WindowsFormsApp1.csproj|C:\\Users\\User-PC\\Documents\\GitHub\\PRG-282-FileReading\\WindowsFormsApp1\\presentation layer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{33D34BA7-6E74-40D4-938F-E741E8B136CA}|WindowsFormsApp1.csproj|solutionrelative:presentation layer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -28,10 +28,10 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "DataHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Frikkie\\Documents\\GitHub\\PRG-282-FileReading\\WindowsFormsApp1\\Data Layer\\DataHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User-PC\\Documents\\GitHub\\PRG-282-FileReading\\WindowsFormsApp1\\Data Layer\\DataHandler.cs",
               "RelativeDocumentMoniker": "Data Layer\\DataHandler.cs",
-              "ToolTip": "C:\\Users\\Frikkie\\Documents\\GitHub\\PRG-282-FileReading\\WindowsFormsApp1\\Data Layer\\DataHandler.cs*",
-              "RelativeToolTip": "Data Layer\\DataHandler.cs*",
+              "ToolTip": "C:\\Users\\User-PC\\Documents\\GitHub\\PRG-282-FileReading\\WindowsFormsApp1\\Data Layer\\DataHandler.cs",
+              "RelativeToolTip": "Data Layer\\DataHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-05T14:09:47.697Z",
@@ -41,10 +41,10 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Frikkie\\Documents\\GitHub\\PRG-282-FileReading\\WindowsFormsApp1\\Presentation Layer\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\User-PC\\Documents\\GitHub\\PRG-282-FileReading\\WindowsFormsApp1\\Presentation Layer\\Form1.cs",
               "RelativeDocumentMoniker": "Presentation Layer\\Form1.cs",
               "ToolTip": "C:\\Users\\Frikkie\\Documents\\GitHub\\PRG-282-FileReading\\WindowsFormsApp1\\Presentation Layer\\Form1.cs [Design]",
-              "RelativeToolTip": "Presentation Layer\\Form1.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Frikkie\\Documents\\GitHub\\PRG-282-FileReading\\WindowsFormsApp1\\Presentation Layer\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-03T09:03:59.626Z"
             }

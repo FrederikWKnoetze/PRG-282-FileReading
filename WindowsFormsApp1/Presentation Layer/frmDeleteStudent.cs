@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace WindowsFormsApp1.Presentation_Layer
 {
-    public partial class Form1 : Form
+    public partial class frmDeleteStudent : Form
     {
-        public Form1()
+        public frmDeleteStudent()
         {
             InitializeComponent();
         }

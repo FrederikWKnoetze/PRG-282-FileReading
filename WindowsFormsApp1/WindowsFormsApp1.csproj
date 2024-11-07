@@ -48,14 +48,44 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data Layer\DataHandler.cs" />
-    <Compile Include="Presentation Layer\Form1.cs">
+    <Compile Include="Presentation Layer\frmAddStudent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation Layer\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Presentation Layer\frmAddStudent.Designer.cs">
+      <DependentUpon>frmAddStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmDeleteStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmDeleteStudent.Designer.cs">
+      <DependentUpon>frmDeleteStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmMainMenu.Designer.cs">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Business Logic Layer\Program.cs" />
+    <Compile Include="Presentation Layer\frmUpdateStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmUpdateStudent.Designer.cs">
+      <DependentUpon>frmUpdateStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\frmViewStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\frmViewStudents.Designer.cs">
+      <DependentUpon>frmViewStudents.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentation Layer\frmMainMenu.resx">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmViewStudents.resx">
+      <DependentUpon>frmViewStudents.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

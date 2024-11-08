@@ -34,9 +34,9 @@
             this.btnPrint = new System.Windows.Forms.Button();
             this.cmbCourse = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblMarks = new System.Windows.Forms.Label();
+            this.lblAge = new System.Windows.Forms.Label();
             this.radLesser = new System.Windows.Forms.RadioButton();
-            this.edtMarks = new System.Windows.Forms.TextBox();
+            this.edtAge = new System.Windows.Forms.TextBox();
             this.grpRadio = new System.Windows.Forms.GroupBox();
             this.radEqual = new System.Windows.Forms.RadioButton();
             this.radGreater = new System.Windows.Forms.RadioButton();
@@ -47,6 +47,8 @@
             this.radAscending = new System.Windows.Forms.RadioButton();
             this.radDecending = new System.Windows.Forms.RadioButton();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.edtID = new System.Windows.Forms.TextBox();
+            this.lblID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewStudents)).BeginInit();
             this.grpRadio.SuspendLayout();
             this.grpSortBy.SuspendLayout();
@@ -90,28 +92,28 @@
             // cmbCourse
             // 
             this.cmbCourse.FormattingEnabled = true;
-            this.cmbCourse.Location = new System.Drawing.Point(633, 65);
+            this.cmbCourse.Location = new System.Drawing.Point(626, 285);
             this.cmbCourse.Name = "cmbCourse";
-            this.cmbCourse.Size = new System.Drawing.Size(121, 21);
+            this.cmbCourse.Size = new System.Drawing.Size(131, 21);
             this.cmbCourse.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(526, 68);
+            this.label2.Location = new System.Drawing.Point(519, 288);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Course";
             // 
-            // lblMarks
+            // lblAge
             // 
-            this.lblMarks.AutoSize = true;
-            this.lblMarks.Location = new System.Drawing.Point(526, 113);
-            this.lblMarks.Name = "lblMarks";
-            this.lblMarks.Size = new System.Drawing.Size(85, 13);
-            this.lblMarks.TabIndex = 6;
-            this.lblMarks.Text = "Marks(0%-100%)";
+            this.lblAge.AutoSize = true;
+            this.lblAge.Location = new System.Drawing.Point(523, 153);
+            this.lblAge.Name = "lblAge";
+            this.lblAge.Size = new System.Drawing.Size(26, 13);
+            this.lblAge.TabIndex = 6;
+            this.lblAge.Text = "Age";
             // 
             // radLesser
             // 
@@ -124,24 +126,24 @@
             this.radLesser.Text = "<=";
             this.radLesser.UseVisualStyleBackColor = true;
             // 
-            // edtMarks
+            // edtAge
             // 
-            this.edtMarks.Location = new System.Drawing.Point(654, 113);
-            this.edtMarks.Name = "edtMarks";
-            this.edtMarks.Size = new System.Drawing.Size(100, 20);
-            this.edtMarks.TabIndex = 8;
+            this.edtAge.Location = new System.Drawing.Point(640, 153);
+            this.edtAge.Name = "edtAge";
+            this.edtAge.Size = new System.Drawing.Size(100, 20);
+            this.edtAge.TabIndex = 8;
             // 
             // grpRadio
             // 
             this.grpRadio.Controls.Add(this.radEqual);
             this.grpRadio.Controls.Add(this.radGreater);
             this.grpRadio.Controls.Add(this.radLesser);
-            this.grpRadio.Location = new System.Drawing.Point(529, 150);
+            this.grpRadio.Location = new System.Drawing.Point(526, 179);
             this.grpRadio.Name = "grpRadio";
             this.grpRadio.Size = new System.Drawing.Size(200, 100);
             this.grpRadio.TabIndex = 9;
             this.grpRadio.TabStop = false;
-            this.grpRadio.Text = "groupBox1";
+            this.grpRadio.Text = "Age";
             // 
             // radEqual
             // 
@@ -168,7 +170,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(529, 263);
+            this.lblName.Location = new System.Drawing.Point(521, 68);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(35, 13);
             this.lblName.TabIndex = 10;
@@ -176,7 +178,7 @@
             // 
             // edtName
             // 
-            this.edtName.Location = new System.Drawing.Point(614, 260);
+            this.edtName.Location = new System.Drawing.Point(606, 65);
             this.edtName.Name = "edtName";
             this.edtName.Size = new System.Drawing.Size(100, 20);
             this.edtName.TabIndex = 11;
@@ -186,7 +188,7 @@
             this.grpSortBy.Controls.Add(this.cmbCategorySortBy);
             this.grpSortBy.Controls.Add(this.radAscending);
             this.grpSortBy.Controls.Add(this.radDecending);
-            this.grpSortBy.Location = new System.Drawing.Point(529, 305);
+            this.grpSortBy.Location = new System.Drawing.Point(526, 330);
             this.grpSortBy.Name = "grpSortBy";
             this.grpSortBy.Size = new System.Drawing.Size(214, 70);
             this.grpSortBy.TabIndex = 10;
@@ -225,7 +227,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(558, 404);
+            this.btnSearch.Location = new System.Drawing.Point(586, 415);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 12;
@@ -233,18 +235,36 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // edtID
+            // 
+            this.edtID.Location = new System.Drawing.Point(640, 111);
+            this.edtID.Name = "edtID";
+            this.edtID.Size = new System.Drawing.Size(100, 20);
+            this.edtID.TabIndex = 14;
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(523, 111);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(58, 13);
+            this.lblID.TabIndex = 13;
+            this.lblID.Text = "Student ID";
+            // 
             // frmViewStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.edtID);
+            this.Controls.Add(this.lblID);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.grpSortBy);
             this.Controls.Add(this.edtName);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.grpRadio);
-            this.Controls.Add(this.edtMarks);
-            this.Controls.Add(this.lblMarks);
+            this.Controls.Add(this.edtAge);
+            this.Controls.Add(this.lblAge);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbCourse);
             this.Controls.Add(this.btnPrint);
@@ -271,9 +291,9 @@
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.ComboBox cmbCourse;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblMarks;
+        private System.Windows.Forms.Label lblAge;
         private System.Windows.Forms.RadioButton radLesser;
-        private System.Windows.Forms.TextBox edtMarks;
+        private System.Windows.Forms.TextBox edtAge;
         private System.Windows.Forms.GroupBox grpRadio;
         private System.Windows.Forms.RadioButton radEqual;
         private System.Windows.Forms.RadioButton radGreater;
@@ -284,5 +304,7 @@
         private System.Windows.Forms.RadioButton radDecending;
         private System.Windows.Forms.ComboBox cmbCategorySortBy;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox edtID;
+        private System.Windows.Forms.Label lblID;
     }
 }

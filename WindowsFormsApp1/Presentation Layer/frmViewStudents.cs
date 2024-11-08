@@ -17,5 +17,9 @@ namespace WindowsFormsApp1.Presentation_Layer
             InitializeComponent();
         }
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

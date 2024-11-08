@@ -28,235 +28,236 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dgvViewStudents = new System.Windows.Forms.DataGridView();
+            this.btnReporty = new System.Windows.Forms.Button();
+            this.lnlParamaters = new System.Windows.Forms.Label();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.cmbCourse = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.lblMarks = new System.Windows.Forms.Label();
+            this.radLesser = new System.Windows.Forms.RadioButton();
+            this.edtMarks = new System.Windows.Forms.TextBox();
+            this.grpRadio = new System.Windows.Forms.GroupBox();
+            this.radEqual = new System.Windows.Forms.RadioButton();
+            this.radGreater = new System.Windows.Forms.RadioButton();
+            this.lblName = new System.Windows.Forms.Label();
+            this.edtName = new System.Windows.Forms.TextBox();
+            this.grpSortBy = new System.Windows.Forms.GroupBox();
+            this.cmbCategorySortBy = new System.Windows.Forms.ComboBox();
+            this.radAscending = new System.Windows.Forms.RadioButton();
+            this.radDecending = new System.Windows.Forms.RadioButton();
+            this.btnSearch = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvViewStudents)).BeginInit();
+            this.grpRadio.SuspendLayout();
+            this.grpSortBy.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvViewStudents
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(58, 38);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(389, 248);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvViewStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvViewStudents.Location = new System.Drawing.Point(58, 38);
+            this.dgvViewStudents.Name = "dgvViewStudents";
+            this.dgvViewStudents.Size = new System.Drawing.Size(389, 248);
+            this.dgvViewStudents.TabIndex = 0;
             // 
-            // button1
+            // btnReporty
             // 
-            this.button1.Location = new System.Drawing.Point(58, 319);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(179, 56);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Generate Summary Report";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnReporty.Location = new System.Drawing.Point(58, 319);
+            this.btnReporty.Name = "btnReporty";
+            this.btnReporty.Size = new System.Drawing.Size(179, 56);
+            this.btnReporty.TabIndex = 1;
+            this.btnReporty.Text = "Generate Summary Report";
+            this.btnReporty.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lnlParamaters
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(598, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "paramaters";
+            this.lnlParamaters.AutoSize = true;
+            this.lnlParamaters.Location = new System.Drawing.Point(601, 19);
+            this.lnlParamaters.Name = "lnlParamaters";
+            this.lnlParamaters.Size = new System.Drawing.Size(60, 13);
+            this.lnlParamaters.TabIndex = 2;
+            this.lnlParamaters.Text = "Paramaters";
             // 
-            // button2
+            // btnPrint
             // 
-            this.button2.Location = new System.Drawing.Point(268, 319);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(179, 56);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Print Data";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnPrint.Location = new System.Drawing.Point(268, 319);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(179, 56);
+            this.btnPrint.TabIndex = 3;
+            this.btnPrint.Text = "Print Data";
+            this.btnPrint.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cmbCourse
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(630, 84);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 4;
+            this.cmbCourse.FormattingEnabled = true;
+            this.cmbCourse.Location = new System.Drawing.Point(633, 65);
+            this.cmbCourse.Name = "cmbCourse";
+            this.cmbCourse.Size = new System.Drawing.Size(121, 21);
+            this.cmbCourse.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(523, 87);
+            this.label2.Location = new System.Drawing.Point(526, 68);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Degree";
+            this.label2.Text = "Course";
             // 
-            // label3
+            // lblMarks
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(523, 132);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Marks(0%-100%)";
+            this.lblMarks.AutoSize = true;
+            this.lblMarks.Location = new System.Drawing.Point(526, 113);
+            this.lblMarks.Name = "lblMarks";
+            this.lblMarks.Size = new System.Drawing.Size(85, 13);
+            this.lblMarks.TabIndex = 6;
+            this.lblMarks.Text = "Marks(0%-100%)";
             // 
-            // radioButton1
+            // radLesser
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(29, 19);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(37, 17);
-            this.radioButton1.TabIndex = 7;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "<=";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radLesser.AutoSize = true;
+            this.radLesser.Location = new System.Drawing.Point(29, 19);
+            this.radLesser.Name = "radLesser";
+            this.radLesser.Size = new System.Drawing.Size(37, 17);
+            this.radLesser.TabIndex = 7;
+            this.radLesser.TabStop = true;
+            this.radLesser.Text = "<=";
+            this.radLesser.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // edtMarks
             // 
-            this.textBox1.Location = new System.Drawing.Point(651, 132);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 8;
+            this.edtMarks.Location = new System.Drawing.Point(654, 113);
+            this.edtMarks.Name = "edtMarks";
+            this.edtMarks.Size = new System.Drawing.Size(100, 20);
+            this.edtMarks.TabIndex = 8;
             // 
-            // groupBox1
+            // grpRadio
             // 
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(526, 169);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 100);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.grpRadio.Controls.Add(this.radEqual);
+            this.grpRadio.Controls.Add(this.radGreater);
+            this.grpRadio.Controls.Add(this.radLesser);
+            this.grpRadio.Location = new System.Drawing.Point(529, 150);
+            this.grpRadio.Name = "grpRadio";
+            this.grpRadio.Size = new System.Drawing.Size(200, 100);
+            this.grpRadio.TabIndex = 9;
+            this.grpRadio.TabStop = false;
+            this.grpRadio.Text = "groupBox1";
             // 
-            // radioButton3
+            // radEqual
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(29, 65);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(31, 17);
-            this.radioButton3.TabIndex = 9;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "=";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radEqual.AutoSize = true;
+            this.radEqual.Location = new System.Drawing.Point(29, 65);
+            this.radEqual.Name = "radEqual";
+            this.radEqual.Size = new System.Drawing.Size(31, 17);
+            this.radEqual.TabIndex = 9;
+            this.radEqual.TabStop = true;
+            this.radEqual.Text = "=";
+            this.radEqual.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radGreater
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(29, 42);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(37, 17);
-            this.radioButton2.TabIndex = 8;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = ">=";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radGreater.AutoSize = true;
+            this.radGreater.Location = new System.Drawing.Point(29, 42);
+            this.radGreater.Name = "radGreater";
+            this.radGreater.Size = new System.Drawing.Size(37, 17);
+            this.radGreater.TabIndex = 8;
+            this.radGreater.TabStop = true;
+            this.radGreater.Text = ">=";
+            this.radGreater.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // lblName
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(526, 307);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Name";
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(529, 263);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(35, 13);
+            this.lblName.TabIndex = 10;
+            this.lblName.Text = "Name";
             // 
-            // textBox2
+            // edtName
             // 
-            this.textBox2.Location = new System.Drawing.Point(611, 304);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 11;
+            this.edtName.Location = new System.Drawing.Point(614, 260);
+            this.edtName.Name = "edtName";
+            this.edtName.Size = new System.Drawing.Size(100, 20);
+            this.edtName.TabIndex = 11;
             // 
-            // label5
+            // grpSortBy
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(526, 369);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(26, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Sort";
+            this.grpSortBy.Controls.Add(this.cmbCategorySortBy);
+            this.grpSortBy.Controls.Add(this.radAscending);
+            this.grpSortBy.Controls.Add(this.radDecending);
+            this.grpSortBy.Location = new System.Drawing.Point(529, 305);
+            this.grpSortBy.Name = "grpSortBy";
+            this.grpSortBy.Size = new System.Drawing.Size(214, 70);
+            this.grpSortBy.TabIndex = 10;
+            this.grpSortBy.TabStop = false;
+            this.grpSortBy.Text = "Sort By";
             // 
-            // groupBox2
+            // cmbCategorySortBy
             // 
-            this.groupBox2.Controls.Add(this.comboBox2);
-            this.groupBox2.Controls.Add(this.radioButton5);
-            this.groupBox2.Controls.Add(this.radioButton6);
-            this.groupBox2.Location = new System.Drawing.Point(558, 354);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(214, 70);
-            this.groupBox2.TabIndex = 10;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.cmbCategorySortBy.FormattingEnabled = true;
+            this.cmbCategorySortBy.Location = new System.Drawing.Point(43, 20);
+            this.cmbCategorySortBy.Name = "cmbCategorySortBy";
+            this.cmbCategorySortBy.Size = new System.Drawing.Size(121, 21);
+            this.cmbCategorySortBy.TabIndex = 13;
             // 
-            // radioButton5
+            // radAscending
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(104, 47);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(76, 17);
-            this.radioButton5.TabIndex = 8;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Adcending";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.radAscending.AutoSize = true;
+            this.radAscending.Location = new System.Drawing.Point(104, 47);
+            this.radAscending.Name = "radAscending";
+            this.radAscending.Size = new System.Drawing.Size(76, 17);
+            this.radAscending.TabIndex = 8;
+            this.radAscending.TabStop = true;
+            this.radAscending.Text = "Adcending";
+            this.radAscending.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // radDecending
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(21, 47);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(77, 17);
-            this.radioButton6.TabIndex = 7;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Decending";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.radDecending.AutoSize = true;
+            this.radDecending.Location = new System.Drawing.Point(21, 47);
+            this.radDecending.Name = "radDecending";
+            this.radDecending.Size = new System.Drawing.Size(77, 17);
+            this.radDecending.TabIndex = 7;
+            this.radDecending.TabStop = true;
+            this.radDecending.Text = "Decending";
+            this.radDecending.UseVisualStyleBackColor = true;
             // 
-            // comboBox2
+            // btnSearch
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(43, 20);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 13;
+            this.btnSearch.Location = new System.Drawing.Point(558, 404);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 12;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // frmViewStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.grpSortBy);
+            this.Controls.Add(this.edtName);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.grpRadio);
+            this.Controls.Add(this.edtMarks);
+            this.Controls.Add(this.lblMarks);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.cmbCourse);
+            this.Controls.Add(this.btnPrint);
+            this.Controls.Add(this.lnlParamaters);
+            this.Controls.Add(this.btnReporty);
+            this.Controls.Add(this.dgvViewStudents);
             this.Name = "frmViewStudents";
             this.Text = "frmViewStudents";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvViewStudents)).EndInit();
+            this.grpRadio.ResumeLayout(false);
+            this.grpRadio.PerformLayout();
+            this.grpSortBy.ResumeLayout(false);
+            this.grpSortBy.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,24 +265,24 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridView dgvViewStudents;
+        private System.Windows.Forms.Button btnReporty;
+        private System.Windows.Forms.Label lnlParamaters;
+        private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.ComboBox cmbCourse;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label lblMarks;
+        private System.Windows.Forms.RadioButton radLesser;
+        private System.Windows.Forms.TextBox edtMarks;
+        private System.Windows.Forms.GroupBox grpRadio;
+        private System.Windows.Forms.RadioButton radEqual;
+        private System.Windows.Forms.RadioButton radGreater;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.TextBox edtName;
+        private System.Windows.Forms.GroupBox grpSortBy;
+        private System.Windows.Forms.RadioButton radAscending;
+        private System.Windows.Forms.RadioButton radDecending;
+        private System.Windows.Forms.ComboBox cmbCategorySortBy;
+        private System.Windows.Forms.Button btnSearch;
     }
 }

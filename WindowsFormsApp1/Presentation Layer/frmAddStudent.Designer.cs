@@ -31,14 +31,14 @@
             this.btnSubmit = new System.Windows.Forms.Button();
             this.edtID = new System.Windows.Forms.TextBox();
             this.edtName = new System.Windows.Forms.TextBox();
-            this.edtSurname = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.lblSurname = new System.Windows.Forms.Label();
             this.cmbCourse = new System.Windows.Forms.ComboBox();
             this.lblCourse = new System.Windows.Forms.Label();
             this.lblAge = new System.Windows.Forms.Label();
             this.edtAge = new System.Windows.Forms.TextBox();
+            this.lblSurname = new System.Windows.Forms.Label();
+            this.edtSurname = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnSubmit
@@ -49,6 +49,7 @@
             this.btnSubmit.TabIndex = 0;
             this.btnSubmit.Text = "button1";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // edtID
             // 
@@ -63,13 +64,6 @@
             this.edtName.Name = "edtName";
             this.edtName.Size = new System.Drawing.Size(100, 20);
             this.edtName.TabIndex = 2;
-            // 
-            // edtSurname
-            // 
-            this.edtSurname.Location = new System.Drawing.Point(355, 252);
-            this.edtSurname.Name = "edtSurname";
-            this.edtSurname.Size = new System.Drawing.Size(100, 20);
-            this.edtSurname.TabIndex = 3;
             // 
             // lblID
             // 
@@ -88,15 +82,6 @@
             this.lblName.Size = new System.Drawing.Size(35, 13);
             this.lblName.TabIndex = 5;
             this.lblName.Text = "Name";
-            // 
-            // lblSurname
-            // 
-            this.lblSurname.AutoSize = true;
-            this.lblSurname.Location = new System.Drawing.Point(383, 219);
-            this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(49, 13);
-            this.lblSurname.TabIndex = 6;
-            this.lblSurname.Text = "Surname";
             // 
             // cmbCourse
             // 
@@ -131,6 +116,22 @@
             this.edtAge.Size = new System.Drawing.Size(100, 20);
             this.edtAge.TabIndex = 9;
             // 
+            // lblSurname
+            // 
+            this.lblSurname.AutoSize = true;
+            this.lblSurname.Location = new System.Drawing.Point(383, 219);
+            this.lblSurname.Name = "lblSurname";
+            this.lblSurname.Size = new System.Drawing.Size(49, 13);
+            this.lblSurname.TabIndex = 6;
+            this.lblSurname.Text = "Surname";
+            // 
+            // edtSurname
+            // 
+            this.edtSurname.Location = new System.Drawing.Point(355, 252);
+            this.edtSurname.Name = "edtSurname";
+            this.edtSurname.Size = new System.Drawing.Size(100, 20);
+            this.edtSurname.TabIndex = 3;
+            // 
             // frmAddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -159,13 +160,13 @@
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.TextBox edtID;
         private System.Windows.Forms.TextBox edtName;
-        private System.Windows.Forms.TextBox edtSurname;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblSurname;
         private System.Windows.Forms.ComboBox cmbCourse;
         private System.Windows.Forms.Label lblCourse;
         private System.Windows.Forms.Label lblAge;
         private System.Windows.Forms.TextBox edtAge;
+        private System.Windows.Forms.Label lblSurname;
+        private System.Windows.Forms.TextBox edtSurname;
     }
 }

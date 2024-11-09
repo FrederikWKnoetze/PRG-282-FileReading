@@ -42,6 +42,7 @@
             this.btnViewStudents.TabIndex = 0;
             this.btnViewStudents.Text = "View Students";
             this.btnViewStudents.UseVisualStyleBackColor = true;
+            this.btnViewStudents.Click += new System.EventHandler(this.btnViewStudents_Click);
             // 
             // btnUpdateStudent
             // 
@@ -81,6 +82,7 @@
             this.Controls.Add(this.btnViewStudents);
             this.Name = "frmMainMenu";
             this.Text = "Main Menu";
+            this.Load += new System.EventHandler(this.frmMainMenu_Load);
             this.ResumeLayout(false);
 
         }

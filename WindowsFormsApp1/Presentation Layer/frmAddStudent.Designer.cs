@@ -150,6 +150,7 @@
             this.Controls.Add(this.btnSubmit);
             this.Name = "frmAddStudent";
             this.Text = "frmAddStudent";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAddStudent_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -236,6 +236,7 @@
             this.Controls.Add(this.dgvViewStudents);
             this.Name = "frmViewStudents";
             this.Text = "frmViewStudents";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmViewStudents_FormClosing);
             this.Load += new System.EventHandler(this.frmViewStudents_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewStudents)).EndInit();
             this.grpSortBy.ResumeLayout(false);

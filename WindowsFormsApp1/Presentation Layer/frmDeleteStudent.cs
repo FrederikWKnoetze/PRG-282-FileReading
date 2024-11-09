@@ -73,5 +73,19 @@ namespace WindowsFormsApp1.Presentation_Layer
             }
 
         }
+
+        private void frmDeleteStudent_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Do you really want to exit?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Hand);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                Environment.Exit(0);
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }

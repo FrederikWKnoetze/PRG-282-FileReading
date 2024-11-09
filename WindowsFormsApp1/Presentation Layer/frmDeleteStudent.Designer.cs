@@ -92,6 +92,7 @@
             this.Controls.Add(this.dgvDelete);
             this.Name = "frmDeleteStudent";
             this.Text = "frmDeleteStudent";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDeleteStudent_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDelete)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

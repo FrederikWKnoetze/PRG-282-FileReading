@@ -53,5 +53,19 @@ namespace WindowsFormsApp1
             frmDeleteStudent frmDeleteStudent = new frmDeleteStudent();
             frmDeleteStudent.ShowDialog();
         }
+
+        private void frmMainMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Do you really want to exit?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Hand);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                Environment.Exit(0);
+            }    
+            else
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }

@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using WindowsFormsApp1.Business_Logic_Layer;
 using WindowsFormsApp1.Presentation_Layer;
 
@@ -31,30 +33,88 @@ namespace WindowsFormsApp1.Data_Layer
                 frmAddStudent.Message(ex.Message);
             }
         }
-        public void RemoveStudentSearch(string ID)
+        public void RemoveStudentSearch(string ID, DataGridView dataGridView)
         {
             try
             {
+                // Read all lines from the file
                 var lines = File.ReadAllLines(filePath).ToList();
+
+                // Find the student line that matches the given ID
                 string studentLine = lines.FirstOrDefault(line => line.Split(',')[0] == ID);
+
+                // Create a DataTable to hold the student data for DataGridView
+                DataTable studentTable = new DataTable();
+                studentTable.Columns.Add("StudentID");
+                studentTable.Columns.Add("Name");
+                studentTable.Columns.Add("Surname");
+                studentTable.Columns.Add("Age");
+                studentTable.Columns.Add("Course");
 
                 if (studentLine != null)
                 {
-                    // Return the student's info line
-                    frmDeleteStudent frmDeleteStudent = new frmDeleteStudent();
-                    frmDeleteStudent.Message(studentLine);
+                    // Split the student data line by comma
+                    string[] studentData = studentLine.Split(',');
+
+                    // Create a row for the DataTable with the student data
+                    DataRow row = studentTable.NewRow();
+                    row["StudentID"] = studentData[0];
+                    row["Name"] = studentData[1];
+                    row["Surname"] = studentData[2];
+                    row["Age"] = studentData[3];
+                    row["Course"] = studentData[4];
+
+                    // Add the row to the DataTable
+                    studentTable.Rows.Add(row);
+
+                    // Bind the DataTable to the DataGridView
+                    dataGridView.DataSource = studentTable;
                 }
                 else
                 {
-                    // Notify if the student with the given ID is not found
+                    // If the student is not found, show a message
                     frmDeleteStudent frmDeleteStudent = new frmDeleteStudent();
-                    frmDeleteStudent.Message("No id found");
+                    frmDeleteStudent.Message("No student found with the given ID.");
                 }
             }
             catch (Exception ex)
             {
+                // Handle any exceptions that occur during the process
                 frmDeleteStudent frmDeleteStudent = new frmDeleteStudent();
                 frmDeleteStudent.Message(ex.Message);
+            }
+        }
+        public void DeleteStudentByID(string studentID)
+        {
+            try
+            {
+                // Read all lines from the file
+                var lines = File.ReadAllLines(filePath).ToList();
+
+                // Find the line that contains the student record with the matching Student ID
+                var studentLine = lines.FirstOrDefault(line => line.Split(',')[0] == studentID);
+
+                if (studentLine != null)
+                {
+                    // Remove the student record from the list
+                    lines.Remove(studentLine);
+
+                    // Write the updated list back to the file
+                    File.WriteAllLines(filePath, lines);
+
+                    // Notify the user that the student record was deleted
+                    MessageBox.Show("Student record deleted successfully.", "Deletion Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    // Notify the user if the student ID was not found
+                    MessageBox.Show("No student record found with the given Student ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any errors that occur during file operations
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

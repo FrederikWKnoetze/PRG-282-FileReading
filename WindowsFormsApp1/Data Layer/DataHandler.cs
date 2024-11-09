@@ -24,7 +24,7 @@ namespace WindowsFormsApp1.Data_Layer
                 {
                     using (StreamWriter sw = new StreamWriter(fs))
                     {
-                        sw.Write(filePath);
+                        sw.Write(startdata);
                     }
 
                 }
@@ -32,7 +32,7 @@ namespace WindowsFormsApp1.Data_Layer
                 {
                     using (StreamWriter sw = new StreamWriter(fs))
                     {
-                        sw.Write(filePath);
+                        sw.Write(startdata);
                     }
 
                     //Data Science

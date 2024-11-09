@@ -16,35 +16,42 @@ namespace WindowsFormsApp1.Data_Layer
     {
         public void CreateFile()
         {
+            string startdata = "6666,Sannie,Koen,21,Data Science\n4444,Piet,Pompies,22,Programming\n1111,Gerhared,Raugh,20,Cyber Security\n2222,Liam,Kaiser,20,Tech Support\n3333,Janie,Knoetze,24,Graphic Design";
             try
             {
+                FileStream fs = new FileStream(filePath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 if (File.Exists(filePath)==true)
                 {
-                    if (File.ReadAllLines(filePath).Length <= 0)
+                    using (StreamWriter sw = new StreamWriter(fs))
                     {
-                        File.Open(filePath, FileMode.OpenOrCreate);
-                        File.WriteAllText(filePath, "6666,Sannie,Koen,21,Data Science\n4444,Piet,Pompies,22,Programming\n1111,Gerhared,Raugh,20,Cyber Security\n2222,Liam,Kaiser,20,Tech Support\n3333,Janie,Knoetze,24,Graphic Design");
-                        
+                        sw.Write(filePath);
                     }
-                    
+
                 }
                 else
                 {
-                    File.Create(filePath);
-                    File.Open(filePath, FileMode.OpenOrCreate);
-                    File.WriteAllText(filePath, "6666,Sannie,Koen,21,Data Science\n4444,Piet,Pompies,22,Programming\n1111,Gerhared,Raugh,20,Cyber Security\n2222,Liam,Kaiser,20,Tech Support\n3333,Janie,Knoetze,24,Graphic Design");
+                    using (StreamWriter sw = new StreamWriter(fs))
+                    {
+                        sw.Write(filePath);
+                    }
+
                     //Data Science
                     //Programming
                     //Cyber Security
                     //Tech Support
                     //Graphic Design
                 }
+                fs.Close();
             }
             catch (Exception ex)
             {
                 frmMainMenu frmMainMenu = new frmMainMenu();
                 MessageBox.Show(ex.Message);
                 throw;
+            }
+            finally
+            {
+                
             }
         }
         private readonly string filePath = "students.txt";

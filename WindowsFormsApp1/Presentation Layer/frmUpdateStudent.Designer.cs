@@ -42,12 +42,14 @@
             this.edtSurname = new System.Windows.Forms.TextBox();
             this.edtName = new System.Windows.Forms.TextBox();
             this.edtID = new System.Windows.Forms.TextBox();
+            this.dgvUpdate = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUpdate)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(97, 99);
+            this.lblSearch.Location = new System.Drawing.Point(36, 45);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(133, 13);
             this.lblSearch.TabIndex = 0;
@@ -55,14 +57,14 @@
             // 
             // edtSearchID
             // 
-            this.edtSearchID.Location = new System.Drawing.Point(113, 171);
+            this.edtSearchID.Location = new System.Drawing.Point(197, 42);
             this.edtSearchID.Name = "edtSearchID";
             this.edtSearchID.Size = new System.Drawing.Size(100, 20);
             this.edtSearchID.TabIndex = 1;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(113, 247);
+            this.btnSearch.Location = new System.Drawing.Point(346, 45);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 2;
@@ -108,6 +110,12 @@
             // cmbCourse
             // 
             this.cmbCourse.FormattingEnabled = true;
+            this.cmbCourse.Items.AddRange(new object[] {
+            "Data Science",
+            "Programming",
+            "Cyber Security",
+            "Tech Support",
+            "Graphic Design"});
             this.cmbCourse.Location = new System.Drawing.Point(503, 293);
             this.cmbCourse.Name = "cmbCourse";
             this.cmbCourse.Size = new System.Drawing.Size(121, 21);
@@ -161,11 +169,20 @@
             this.edtID.Size = new System.Drawing.Size(100, 20);
             this.edtID.TabIndex = 11;
             // 
+            // dgvUpdate
+            // 
+            this.dgvUpdate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUpdate.Location = new System.Drawing.Point(57, 120);
+            this.dgvUpdate.Name = "dgvUpdate";
+            this.dgvUpdate.Size = new System.Drawing.Size(364, 221);
+            this.dgvUpdate.TabIndex = 21;
+            // 
             // frmUpdateStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvUpdate);
             this.Controls.Add(this.lblAge);
             this.Controls.Add(this.edtAge);
             this.Controls.Add(this.lblCourse);
@@ -184,6 +201,7 @@
             this.Text = "frmUpdateStudent";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmUpdateStudent_FormClosing);
             this.Load += new System.EventHandler(this.frmUpdateStudent_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUpdate)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,5 +223,6 @@
         private System.Windows.Forms.TextBox edtSurname;
         private System.Windows.Forms.TextBox edtName;
         private System.Windows.Forms.TextBox edtID;
+        private System.Windows.Forms.DataGridView dgvUpdate;
     }
 }

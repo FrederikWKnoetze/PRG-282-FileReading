@@ -86,6 +86,12 @@
             // cmbCourse
             // 
             this.cmbCourse.FormattingEnabled = true;
+            this.cmbCourse.Items.AddRange(new object[] {
+            "Data Science",
+            "Programming",
+            "Cyber Security",
+            "Tech Support",
+            "Graphic Design"});
             this.cmbCourse.Location = new System.Drawing.Point(355, 342);
             this.cmbCourse.Name = "cmbCourse";
             this.cmbCourse.Size = new System.Drawing.Size(121, 21);

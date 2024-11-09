@@ -14,6 +14,39 @@ namespace WindowsFormsApp1.Data_Layer
 {
     public class DataHandler
     {
+        public void CreateFile()
+        {
+            try
+            {
+                if (File.Exists(filePath)==true)
+                {
+                    if (File.ReadAllLines(filePath).Length <= 0)
+                    {
+                        File.Open(filePath, FileMode.OpenOrCreate);
+                        File.WriteAllText(filePath, "6666,Sannie,Koen,21,Data Science\n4444,Piet,Pompies,22,Programming\n1111,Gerhared,Raugh,20,Cyber Security\n2222,Liam,Kaiser,20,Tech Support\n3333,Janie,Knoetze,24,Graphic Design");
+                        
+                    }
+                    
+                }
+                else
+                {
+                    File.Create(filePath);
+                    File.Open(filePath, FileMode.OpenOrCreate);
+                    File.WriteAllText(filePath, "6666,Sannie,Koen,21,Data Science\n4444,Piet,Pompies,22,Programming\n1111,Gerhared,Raugh,20,Cyber Security\n2222,Liam,Kaiser,20,Tech Support\n3333,Janie,Knoetze,24,Graphic Design");
+                    //Data Science
+                    //Programming
+                    //Cyber Security
+                    //Tech Support
+                    //Graphic Design
+                }
+            }
+            catch (Exception ex)
+            {
+                frmMainMenu frmMainMenu = new frmMainMenu();
+                MessageBox.Show(ex.Message);
+                throw;
+            }
+        }
         private readonly string filePath = "students.txt";
         public void AddStudent(Students student)
         {

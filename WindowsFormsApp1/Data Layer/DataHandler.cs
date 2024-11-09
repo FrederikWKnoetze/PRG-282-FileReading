@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-<<<<<<< HEAD
 using System.Drawing.Drawing2D;
-=======
->>>>>>> 77a69429e43f40b8a4be6daf7aa1075618947180
 using System.IO;
 using System.Linq;
 using System.Text;

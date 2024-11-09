@@ -23,9 +23,7 @@ namespace WindowsFormsApp1
 
         private void frmMainMenu_Load(object sender, EventArgs e)
         {
-            this.Hide();
-            frmUpdateStudent frmUpdateStudent = new frmUpdateStudent();
-            frmUpdateStudent.ShowDialog();
+            
         }
 
         private void btnViewStudents_Click(object sender, EventArgs e)
@@ -33,6 +31,27 @@ namespace WindowsFormsApp1
             this.Hide();
             frmViewStudents frmViewStudent = new frmViewStudents();
             frmViewStudent.ShowDialog();
+        }
+
+        private void btnAddStudent_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmAddStudent frmAddStudent = new frmAddStudent();
+            frmAddStudent.ShowDialog();
+        }
+
+        private void btnUpdateStudent_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmUpdateStudent frmUpdateStudent = new frmUpdateStudent();
+            frmUpdateStudent.ShowDialog();
+        }
+
+        private void btnDeleteStudent_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmDeleteStudent frmDeleteStudent = new frmDeleteStudent();
+            frmDeleteStudent.ShowDialog();
         }
     }
 }

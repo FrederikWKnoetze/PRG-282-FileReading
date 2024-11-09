@@ -52,6 +52,7 @@
             this.btnUpdateStudent.TabIndex = 2;
             this.btnUpdateStudent.Text = "Update Student Information";
             this.btnUpdateStudent.UseVisualStyleBackColor = true;
+            this.btnUpdateStudent.Click += new System.EventHandler(this.btnUpdateStudent_Click);
             // 
             // btnAddStudent
             // 
@@ -61,6 +62,7 @@
             this.btnAddStudent.TabIndex = 3;
             this.btnAddStudent.Text = "Add new Student";
             this.btnAddStudent.UseVisualStyleBackColor = true;
+            this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
             // 
             // btnDeleteStudent
             // 
@@ -70,6 +72,7 @@
             this.btnDeleteStudent.TabIndex = 4;
             this.btnDeleteStudent.Text = "Delete Student";
             this.btnDeleteStudent.UseVisualStyleBackColor = true;
+            this.btnDeleteStudent.Click += new System.EventHandler(this.btnDeleteStudent_Click);
             // 
             // frmMainMenu
             // 

@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business Logic Layer\Students.cs" />
     <Compile Include="Data Layer\DataHandler.cs" />
     <Compile Include="Presentation Layer\frmAddStudent.cs">
       <SubType>Form</SubType>
@@ -82,6 +83,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Presentation Layer\frmAddStudent.resx">
       <DependentUpon>frmAddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\frmDeleteStudent.resx">
+      <DependentUpon>frmDeleteStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\frmMainMenu.resx">
       <DependentUpon>frmMainMenu.cs</DependentUpon>

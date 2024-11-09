@@ -24,8 +24,8 @@ namespace WindowsFormsApp1
         private void frmMainMenu_Load(object sender, EventArgs e)
         {
             this.Hide();
-            frmDeleteStudent frmDeleteStudent = new frmDeleteStudent();
-            frmDeleteStudent.ShowDialog();
+            frmUpdateStudent frmUpdateStudent = new frmUpdateStudent();
+            frmUpdateStudent.ShowDialog();
         }
 
         private void btnViewStudents_Click(object sender, EventArgs e)

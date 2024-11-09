@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Data_Layer;
 
 namespace WindowsFormsApp1.Presentation_Layer
 {
@@ -17,5 +18,31 @@ namespace WindowsFormsApp1.Presentation_Layer
             InitializeComponent();
         }
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string studentID = edtSearchID.Text;
+            DataHandler dataHandler = new DataHandler();
+            dataHandler.searchStudentUpdate(studentID, this);
+        }
+        public void changeEDT(string studentID, string Name, string Surname, string Age, string course) 
+        {
+            edtID.Text = studentID;
+            edtName.Text = Name;
+            edtSurname.Text = Surname;
+            edtAge.Text = Age;
+            cmbCourse.Text = course;
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            DataHandler dataHandler = new DataHandler();
+            string oldID = edtSearchID.Text;
+            string newID = edtSearchID.Text;
+            string Name = edtName.Text;
+            string Surname = edtSurname.Text;
+            string Age = edtAge.Text;
+            string Course = cmbCourse.Text;
+            dataHandler.updateInfo(oldID, newID, Name, Surname, Age, Course);
+        }
     }
 }

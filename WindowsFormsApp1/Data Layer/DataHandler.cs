@@ -117,6 +117,59 @@ namespace WindowsFormsApp1.Data_Layer
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        public void searchStudentUpdate(string studentID, frmUpdateStudent frmUpdateStudent)
+        {
+            try
+            {
+                // Read all lines from the file
+                var lines = File.ReadAllLines(filePath).ToList();
+
+                // Find the student line that matches the given ID
+                string studentLine = lines.FirstOrDefault(line => line.Split(',')[0] == studentID);
+
+                if (studentLine != null)
+                {
+                    // Split the student data line by comma
+                    string[] studentData = studentLine.Split(',');
+                    // Call changeEDT on the passed frmUpdateStudent instance
+                    frmUpdateStudent.changeEDT(studentData[0], studentData[1], studentData[2], studentData[3], studentData[4]);
+                }
+                else
+                {
+                    MessageBox.Show("No student found with the given ID");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void updateInfo(string oldStudentID, string newStudentID, string name, string surname, string age, string course)
+        {
+            try
+            {
+                // Read all lines from the file
+                var lines = File.ReadAllLines(filePath).ToList();
+
+                // Find the line with the oldStudentID and remove it
+                lines.RemoveAll(line => line.Split(',')[0] == oldStudentID);
+
+                // Create the new student data line
+                string updatedStudentData = $"{newStudentID},{name},{surname},{age},{course}";
+
+                // Add the updated line to the list
+                lines.Add(updatedStudentData);
+
+                // Write all lines back to the file
+                File.WriteAllLines(filePath, lines);
+
+                MessageBox.Show("Student information updated successfully.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+        }
     }
 }
                

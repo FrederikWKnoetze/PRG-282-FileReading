@@ -66,6 +66,7 @@
             this.btnReporty.TabIndex = 1;
             this.btnReporty.Text = "Generate Summary Report";
             this.btnReporty.UseVisualStyleBackColor = true;
+            this.btnReporty.Click += new System.EventHandler(this.btnReporty_Click);
             // 
             // lnlParamaters
             // 
@@ -84,10 +85,17 @@
             this.btnPrint.TabIndex = 3;
             this.btnPrint.Text = "Print Data";
             this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // cmbCourse
             // 
             this.cmbCourse.FormattingEnabled = true;
+            this.cmbCourse.Items.AddRange(new object[] {
+            "Data Science",
+            "Programming",
+            "Cyber Security",
+            "Tech Support",
+            "Graphic Design"});
             this.cmbCourse.Location = new System.Drawing.Point(626, 285);
             this.cmbCourse.Name = "cmbCourse";
             this.cmbCourse.Size = new System.Drawing.Size(131, 21);
@@ -235,6 +243,7 @@
             this.Controls.Add(this.btnReporty);
             this.Controls.Add(this.dgvViewStudents);
             this.Name = "frmViewStudents";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmViewStudents";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmViewStudents_FormClosing);
             this.Load += new System.EventHandler(this.frmViewStudents_Load);

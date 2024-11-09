@@ -91,6 +91,7 @@
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dgvDelete);
             this.Name = "frmDeleteStudent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDeleteStudent";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDeleteStudent_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDelete)).EndInit();

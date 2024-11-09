@@ -84,6 +84,7 @@
             this.Controls.Add(this.btnUpdateStudent);
             this.Controls.Add(this.btnViewStudents);
             this.Name = "frmMainMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Menu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMainMenu_FormClosing);
             this.Load += new System.EventHandler(this.frmMainMenu_Load);

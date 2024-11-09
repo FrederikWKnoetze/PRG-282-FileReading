@@ -228,5 +228,18 @@ namespace WindowsFormsApp1.Presentation_Layer
         {
 
         }
+
+        private void btnReporty_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                throw;
+            }
+        }
     }
 }

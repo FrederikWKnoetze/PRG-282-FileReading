@@ -66,6 +66,7 @@
             this.btnReporty.TabIndex = 1;
             this.btnReporty.Text = "Generate Summary Report";
             this.btnReporty.UseVisualStyleBackColor = true;
+            this.btnReporty.Click += new System.EventHandler(this.btnReporty_Click);
             // 
             // lnlParamaters
             // 

@@ -30,7 +30,9 @@ namespace WindowsFormsApp1
 
         private void btnViewStudents_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            frmViewStudents frmViewStudent = new frmViewStudents();
+            frmViewStudent.ShowDialog();
         }
     }
 }

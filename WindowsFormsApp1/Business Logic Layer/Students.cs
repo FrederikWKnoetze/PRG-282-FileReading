@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using WindowsFormsApp1.Data_Layer;
 using WindowsFormsApp1.Presentation_Layer;
+using System.Security.Cryptography.X509Certificates;
+using System.Data;
+using System.IO;
 
 namespace WindowsFormsApp1.Business_Logic_Layer
 {
@@ -95,7 +98,8 @@ namespace WindowsFormsApp1.Business_Logic_Layer
                 frmAddStudent frmAddStudent = new frmAddStudent();
                 frmAddStudent.Message("Did not insert student because info is incorrect");
             }
-
         }
+
+        
     }
 }

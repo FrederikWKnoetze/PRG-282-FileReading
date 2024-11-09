@@ -198,6 +198,7 @@
             this.Controls.Add(this.edtSearchID);
             this.Controls.Add(this.lblSearch);
             this.Name = "frmUpdateStudent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmUpdateStudent";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmUpdateStudent_FormClosing);
             this.Load += new System.EventHandler(this.frmUpdateStudent_Load);

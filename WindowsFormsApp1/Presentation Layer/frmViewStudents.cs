@@ -223,5 +223,10 @@ namespace WindowsFormsApp1.Presentation_Layer
                 e.Cancel = true;
             }
         }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

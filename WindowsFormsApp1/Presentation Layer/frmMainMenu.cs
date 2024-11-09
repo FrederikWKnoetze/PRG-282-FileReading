@@ -23,7 +23,8 @@ namespace WindowsFormsApp1
 
         private void frmMainMenu_Load(object sender, EventArgs e)
         {
-            
+            DataHandler dataHandler = new DataHandler();
+            dataHandler.CreateFile();
         }
 
         private void btnViewStudents_Click(object sender, EventArgs e)

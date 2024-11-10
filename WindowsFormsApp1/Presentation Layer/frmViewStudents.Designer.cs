@@ -122,7 +122,7 @@
             // lblAge
             // 
             this.lblAge.AutoSize = true;
-            this.lblAge.Location = new System.Drawing.Point(509, 217);
+            this.lblAge.Location = new System.Drawing.Point(509, 253);
             this.lblAge.Name = "lblAge";
             this.lblAge.Size = new System.Drawing.Size(26, 13);
             this.lblAge.TabIndex = 6;
@@ -224,7 +224,7 @@
             // lblSurname
             // 
             this.lblSurname.AutoSize = true;
-            this.lblSurname.Location = new System.Drawing.Point(509, 253);
+            this.lblSurname.Location = new System.Drawing.Point(509, 217);
             this.lblSurname.Name = "lblSurname";
             this.lblSurname.Size = new System.Drawing.Size(49, 13);
             this.lblSurname.TabIndex = 15;
@@ -310,15 +310,19 @@
             // 
             this.edtAvgAge.Location = new System.Drawing.Point(435, 410);
             this.edtAvgAge.Name = "edtAvgAge";
+            this.edtAvgAge.ReadOnly = true;
             this.edtAvgAge.Size = new System.Drawing.Size(70, 20);
             this.edtAvgAge.TabIndex = 22;
+            this.edtAvgAge.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // edtNumOfStudents
             // 
             this.edtNumOfStudents.Location = new System.Drawing.Point(346, 410);
             this.edtNumOfStudents.Name = "edtNumOfStudents";
+            this.edtNumOfStudents.ReadOnly = true;
             this.edtNumOfStudents.Size = new System.Drawing.Size(75, 20);
             this.edtNumOfStudents.TabIndex = 24;
+            this.edtNumOfStudents.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblNumOfStudents
             // 

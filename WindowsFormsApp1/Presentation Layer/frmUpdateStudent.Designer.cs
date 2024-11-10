@@ -47,7 +47,7 @@
             this.btnback = new System.Windows.Forms.Button();
             this.lblTime = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
-            this.lblView = new System.Windows.Forms.Label();
+            this.lblUpdate = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
@@ -231,22 +231,22 @@
             this.lblDate.TabIndex = 1;
             this.lblDate.Text = "Date";
             // 
-            // lblView
+            // lblUpdate
             // 
-            this.lblView.AutoSize = true;
-            this.lblView.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblView.Location = new System.Drawing.Point(302, 30);
-            this.lblView.Name = "lblView";
-            this.lblView.Size = new System.Drawing.Size(217, 31);
-            this.lblView.TabIndex = 0;
-            this.lblView.Text = "Update Student";
+            this.lblUpdate.AutoSize = true;
+            this.lblUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUpdate.Location = new System.Drawing.Point(302, 30);
+            this.lblUpdate.Name = "lblUpdate";
+            this.lblUpdate.Size = new System.Drawing.Size(217, 31);
+            this.lblUpdate.TabIndex = 0;
+            this.lblUpdate.Text = "Update Student";
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.panel5.Controls.Add(this.lblTime);
             this.panel5.Controls.Add(this.lblDate);
-            this.panel5.Controls.Add(this.lblView);
+            this.panel5.Controls.Add(this.lblUpdate);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
@@ -325,7 +325,7 @@
         private System.Windows.Forms.Button btnback;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.Label lblView;
+        private System.Windows.Forms.Label lblUpdate;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;

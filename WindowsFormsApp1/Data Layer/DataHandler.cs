@@ -18,7 +18,7 @@ namespace WindowsFormsApp1.Data_Layer
         {
             //
             //dumma data if file does not exsist or is empty
-            string startdata = "6666,Sannie,Koen,21,Data Science\n4444,Piet,Pompies,22,Programming\n1111,Gerhared,Raugh,20,Cyber Security\n2222,Liam,Kaiser,20,Tech Support\n3333,Janie,Knoetze,24,Graphic Design\n";
+            string startdata = "666666,Sannie,Koen,21,Data Science\n444444,Piet,Pompies,22,Programming\n111111,Gerhared,Raugh,20,Cyber Security\n222222,Liam,Kaiser,20,Tech Support\n333333,Janie,Knoetze,24,Graphic Design\n408123,Pieter,Pienaar,21,Software Design\n600321,Frederik,Knoetze,20,Business Intelligence\n233021,Gideon,Vermeulen,22,Robotics";
             try
             {
                // MessageBox.Show("working");

@@ -47,8 +47,18 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnback = new System.Windows.Forms.Button();
+            this.pnlID = new System.Windows.Forms.Panel();
+            this.pnlName = new System.Windows.Forms.Panel();
+            this.pnlSurname = new System.Windows.Forms.Panel();
+            this.pnlAge = new System.Windows.Forms.Panel();
+            this.pnlCourse = new System.Windows.Forms.Panel();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.pnlID.SuspendLayout();
+            this.pnlName.SuspendLayout();
+            this.pnlSurname.SuspendLayout();
+            this.pnlAge.SuspendLayout();
+            this.pnlCourse.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSubmit
@@ -65,15 +75,15 @@
             // edtID
             // 
             this.edtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edtID.Location = new System.Drawing.Point(326, 110);
+            this.edtID.Location = new System.Drawing.Point(1, 1);
             this.edtID.Name = "edtID";
-            this.edtID.Size = new System.Drawing.Size(290, 35);
+            this.edtID.Size = new System.Drawing.Size(291, 35);
             this.edtID.TabIndex = 1;
             // 
             // edtName
             // 
             this.edtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edtName.Location = new System.Drawing.Point(326, 167);
+            this.edtName.Location = new System.Drawing.Point(1, 1);
             this.edtName.Name = "edtName";
             this.edtName.Size = new System.Drawing.Size(290, 35);
             this.edtName.TabIndex = 2;
@@ -108,7 +118,7 @@
             "Cyber Security",
             "Tech Support",
             "Graphic Design"});
-            this.cmbCourse.Location = new System.Drawing.Point(326, 329);
+            this.cmbCourse.Location = new System.Drawing.Point(1, 1);
             this.cmbCourse.Name = "cmbCourse";
             this.cmbCourse.Size = new System.Drawing.Size(290, 37);
             this.cmbCourse.TabIndex = 7;
@@ -136,7 +146,7 @@
             // edtAge
             // 
             this.edtAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edtAge.Location = new System.Drawing.Point(326, 274);
+            this.edtAge.Location = new System.Drawing.Point(1, 1);
             this.edtAge.Name = "edtAge";
             this.edtAge.Size = new System.Drawing.Size(290, 35);
             this.edtAge.TabIndex = 9;
@@ -154,7 +164,7 @@
             // edtSurname
             // 
             this.edtSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edtSurname.Location = new System.Drawing.Point(326, 220);
+            this.edtSurname.Location = new System.Drawing.Point(1, 1);
             this.edtSurname.Name = "edtSurname";
             this.edtSurname.Size = new System.Drawing.Size(290, 35);
             this.edtSurname.TabIndex = 3;
@@ -198,7 +208,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(800, 89);
+            this.panel5.Size = new System.Drawing.Size(801, 89);
             this.panel5.TabIndex = 18;
             // 
             // timer1
@@ -227,24 +237,74 @@
             this.btnback.UseVisualStyleBackColor = true;
             this.btnback.Click += new System.EventHandler(this.btnback_Click);
             // 
+            // pnlID
+            // 
+            this.pnlID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlID.Controls.Add(this.edtID);
+            this.pnlID.Location = new System.Drawing.Point(326, 110);
+            this.pnlID.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlID.Name = "pnlID";
+            this.pnlID.Size = new System.Drawing.Size(293, 37);
+            this.pnlID.TabIndex = 21;
+            // 
+            // pnlName
+            // 
+            this.pnlName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlName.Controls.Add(this.edtName);
+            this.pnlName.Location = new System.Drawing.Point(327, 167);
+            this.pnlName.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlName.Name = "pnlName";
+            this.pnlName.Size = new System.Drawing.Size(293, 37);
+            this.pnlName.TabIndex = 22;
+            // 
+            // pnlSurname
+            // 
+            this.pnlSurname.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlSurname.Controls.Add(this.edtSurname);
+            this.pnlSurname.Location = new System.Drawing.Point(327, 220);
+            this.pnlSurname.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlSurname.Name = "pnlSurname";
+            this.pnlSurname.Size = new System.Drawing.Size(293, 37);
+            this.pnlSurname.TabIndex = 23;
+            // 
+            // pnlAge
+            // 
+            this.pnlAge.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlAge.Controls.Add(this.edtAge);
+            this.pnlAge.Location = new System.Drawing.Point(326, 274);
+            this.pnlAge.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlAge.Name = "pnlAge";
+            this.pnlAge.Size = new System.Drawing.Size(293, 37);
+            this.pnlAge.TabIndex = 24;
+            // 
+            // pnlCourse
+            // 
+            this.pnlCourse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlCourse.Controls.Add(this.cmbCourse);
+            this.pnlCourse.Location = new System.Drawing.Point(326, 329);
+            this.pnlCourse.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlCourse.Name = "pnlCourse";
+            this.pnlCourse.Size = new System.Drawing.Size(293, 39);
+            this.pnlCourse.TabIndex = 25;
+            // 
             // frmAddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(801, 451);
+            this.Controls.Add(this.pnlCourse);
+            this.Controls.Add(this.pnlAge);
+            this.Controls.Add(this.pnlSurname);
+            this.Controls.Add(this.pnlName);
+            this.Controls.Add(this.pnlID);
             this.Controls.Add(this.btnback);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.lblAge);
-            this.Controls.Add(this.edtAge);
             this.Controls.Add(this.lblCourse);
-            this.Controls.Add(this.cmbCourse);
             this.Controls.Add(this.lblSurname);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblID);
-            this.Controls.Add(this.edtSurname);
-            this.Controls.Add(this.edtName);
-            this.Controls.Add(this.edtID);
             this.Name = "frmAddStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddStudent";
@@ -253,6 +313,15 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.pnlID.ResumeLayout(false);
+            this.pnlID.PerformLayout();
+            this.pnlName.ResumeLayout(false);
+            this.pnlName.PerformLayout();
+            this.pnlSurname.ResumeLayout(false);
+            this.pnlSurname.PerformLayout();
+            this.pnlAge.ResumeLayout(false);
+            this.pnlAge.PerformLayout();
+            this.pnlCourse.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,5 +348,10 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnback;
+        private System.Windows.Forms.Panel pnlID;
+        private System.Windows.Forms.Panel pnlName;
+        private System.Windows.Forms.Panel pnlSurname;
+        private System.Windows.Forms.Panel pnlAge;
+        private System.Windows.Forms.Panel pnlCourse;
     }
 }

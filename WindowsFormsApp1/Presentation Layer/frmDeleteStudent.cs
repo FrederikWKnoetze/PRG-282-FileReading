@@ -92,13 +92,6 @@ namespace WindowsFormsApp1.Presentation_Layer
             }
         }
 
-        private void btnback_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            frmMainMenu frmMainMenu = new frmMainMenu();
-            frmMainMenu.ShowDialog();
-        }
-
         private void frmDeleteStudent_Load(object sender, EventArgs e)
         {
             lblDate.Text = DateTime.Now.ToShortDateString();
@@ -147,6 +140,13 @@ namespace WindowsFormsApp1.Presentation_Layer
         {
             lblDate.Text = DateTime.Now.ToShortDateString();
             lblTime.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+
+        private void btnback_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmMainMenu frmMainMenu = new frmMainMenu();
+            frmMainMenu.ShowDialog();
         }
     }
 }

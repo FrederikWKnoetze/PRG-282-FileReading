@@ -23,17 +23,11 @@ namespace WindowsFormsApp1
 
         private void frmMainMenu_Load(object sender, EventArgs e)
         {
-
-            this.Hide();
-            frmDeleteStudent frmDeleteStudent = new frmDeleteStudent();
-            frmDeleteStudent.ShowDialog();
-
             lblDate.Text = DateTime.Now.ToShortDateString();
             lblTime.Text = DateTime.Now.ToString("HH:mm:ss");
 
             DataHandler dataHandler = new DataHandler();
             dataHandler.CreateFile();
-
         }
 
         private void btnViewStudents_Click(object sender, EventArgs e)

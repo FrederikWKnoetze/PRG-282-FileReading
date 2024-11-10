@@ -23,12 +23,17 @@ namespace WindowsFormsApp1
 
         private void frmMainMenu_Load(object sender, EventArgs e)
         {
+
             this.Hide();
             frmDeleteStudent frmDeleteStudent = new frmDeleteStudent();
             frmDeleteStudent.ShowDialog();
 
             lblDate.Text = DateTime.Now.ToShortDateString();
             lblTime.Text = DateTime.Now.ToString("HH:mm:ss");
+
+            DataHandler dataHandler = new DataHandler();
+            dataHandler.CreateFile();
+
         }
 
         private void btnViewStudents_Click(object sender, EventArgs e)
@@ -45,6 +50,7 @@ namespace WindowsFormsApp1
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
+
         {
             this.Hide();
             frmAddStudent frmAddStudent = new frmAddStudent();
@@ -58,11 +64,29 @@ namespace WindowsFormsApp1
             frmUpdateStudent.ShowDialog();
         }
 
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
             this.Hide();
             frmDeleteStudent frmDeleteStudent = new frmDeleteStudent();
             frmDeleteStudent.ShowDialog();
         }
+
+
+
+        private void frmMainMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Do you really want to exit?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Hand);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                Environment.Exit(0);
+            }    
+            else
+            {
+                e.Cancel = true;
+            }
+        }
+
     }
 }

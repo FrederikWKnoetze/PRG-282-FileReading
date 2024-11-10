@@ -64,20 +64,25 @@
             // dgvViewStudents
             // 
             this.dgvViewStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
             this.dgvViewStudents.Location = new System.Drawing.Point(-1, 88);
+
             this.dgvViewStudents.Name = "dgvViewStudents";
             this.dgvViewStudents.Size = new System.Drawing.Size(489, 281);
             this.dgvViewStudents.TabIndex = 0;
             // 
             // btnReporty
             // 
+
             this.btnReporty.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReporty.Location = new System.Drawing.Point(-3, -4);
+
             this.btnReporty.Name = "btnReporty";
             this.btnReporty.Size = new System.Drawing.Size(165, 65);
             this.btnReporty.TabIndex = 1;
             this.btnReporty.Text = "Generate Summary Report";
             this.btnReporty.UseVisualStyleBackColor = true;
+            this.btnReporty.Click += new System.EventHandler(this.btnReporty_Click);
             // 
             // lblParamaters
             // 
@@ -98,11 +103,22 @@
             this.btnPrint.TabIndex = 3;
             this.btnPrint.Text = "Print Data";
             this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // cmbCourse
             // 
             this.cmbCourse.FormattingEnabled = true;
+
             this.cmbCourse.Location = new System.Drawing.Point(593, 290);
+
+            this.cmbCourse.Items.AddRange(new object[] {
+            "Data Science",
+            "Programming",
+            "Cyber Security",
+            "Tech Support",
+            "Graphic Design"});
+            this.cmbCourse.Location = new System.Drawing.Point(626, 285);
+
             this.cmbCourse.Name = "cmbCourse";
             this.cmbCourse.Size = new System.Drawing.Size(195, 21);
             this.cmbCourse.TabIndex = 4;
@@ -297,6 +313,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);
@@ -314,7 +331,9 @@
             this.Controls.Add(this.lblParamaters);
             this.Controls.Add(this.dgvViewStudents);
             this.Name = "frmViewStudents";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmViewStudents";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmViewStudents_FormClosing);
             this.Load += new System.EventHandler(this.frmViewStudents_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewStudents)).EndInit();
             this.grpSortBy.ResumeLayout(false);
@@ -355,5 +374,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+
     }
 }

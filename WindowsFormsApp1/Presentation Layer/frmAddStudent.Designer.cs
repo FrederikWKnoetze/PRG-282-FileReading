@@ -40,6 +40,7 @@
             this.edtAge = new System.Windows.Forms.TextBox();
             this.lblSurname = new System.Windows.Forms.Label();
             this.edtSurname = new System.Windows.Forms.TextBox();
+
             this.lblTime = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblView = new System.Windows.Forms.Label();
@@ -48,6 +49,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
+
             this.SuspendLayout();
             // 
             // btnSubmit
@@ -101,7 +103,17 @@
             // 
             this.cmbCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCourse.FormattingEnabled = true;
+
             this.cmbCourse.Location = new System.Drawing.Point(326, 326);
+
+            this.cmbCourse.Items.AddRange(new object[] {
+            "Data Science",
+            "Programming",
+            "Cyber Security",
+            "Tech Support",
+            "Graphic Design"});
+            this.cmbCourse.Location = new System.Drawing.Point(355, 342);
+
             this.cmbCourse.Name = "cmbCourse";
             this.cmbCourse.Size = new System.Drawing.Size(290, 37);
             this.cmbCourse.TabIndex = 7;
@@ -152,6 +164,7 @@
             this.edtSurname.Size = new System.Drawing.Size(290, 35);
             this.edtSurname.TabIndex = 3;
             // 
+
             // lblTime
             // 
             this.lblTime.AutoSize = true;
@@ -214,8 +227,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);
+
             this.Controls.Add(this.lblAge);
             this.Controls.Add(this.edtAge);
             this.Controls.Add(this.lblCourse);
@@ -227,11 +242,16 @@
             this.Controls.Add(this.edtName);
             this.Controls.Add(this.edtID);
             this.Name = "frmAddStudent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddStudent";
+
             this.Load += new System.EventHandler(this.frmAddStudent_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel1.ResumeLayout(false);
+
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAddStudent_FormClosing);
+
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,11 +270,13 @@
         private System.Windows.Forms.TextBox edtAge;
         private System.Windows.Forms.Label lblSurname;
         private System.Windows.Forms.TextBox edtSurname;
+
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label lblView;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel1;
+
     }
 }

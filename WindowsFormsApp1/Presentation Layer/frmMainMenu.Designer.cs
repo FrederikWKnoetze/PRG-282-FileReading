@@ -62,6 +62,7 @@
             // 
             // panel1
             // 
+
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnViewStudents);
             this.panel1.Location = new System.Drawing.Point(130, 177);
@@ -71,15 +72,18 @@
             // 
             // panel2
             // 
+
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.btnAdd);
             this.panel2.Location = new System.Drawing.Point(483, 177);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(171, 68);
             this.panel2.TabIndex = 6;
+
             // 
             // btnAdd
             // 
+
             this.btnAdd.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Location = new System.Drawing.Point(-29, -15);
             this.btnAdd.Name = "btnAdd";
@@ -190,6 +194,7 @@
             this.Name = "frmMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Menu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMainMenu_FormClosing);
             this.Load += new System.EventHandler(this.frmMainMenu_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

@@ -235,15 +235,18 @@ namespace WindowsFormsApp1.Presentation_Layer
             {
                 string output;
                 output = "Summary Report\n";
-                string rowcount=dgvViewStudents.Rows.Count.ToString();
+                string rowcount;
+                rowcount = (dgvViewStudents.Rows.Count - 1).ToString();
+                
                 output += $"Number of Students:{rowcount}\n";
                 int avgage = 0;
                 int count = 0;
 
                 //count and break is here beacause the is 6? rows and it breaks
+                //each thing neads -1
                 foreach (DataGridViewRow row in dgvViewStudents.Rows)
                 {
-                    if (count==5)
+                    if (count==int.Parse(rowcount))
                     {
                         break;
                     }

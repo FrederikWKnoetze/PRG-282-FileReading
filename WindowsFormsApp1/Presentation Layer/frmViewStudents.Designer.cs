@@ -64,19 +64,15 @@
             // dgvViewStudents
             // 
             this.dgvViewStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-
             this.dgvViewStudents.Location = new System.Drawing.Point(-1, 88);
-
             this.dgvViewStudents.Name = "dgvViewStudents";
             this.dgvViewStudents.Size = new System.Drawing.Size(489, 281);
             this.dgvViewStudents.TabIndex = 0;
             // 
             // btnReporty
             // 
-
             this.btnReporty.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReporty.Location = new System.Drawing.Point(-3, -4);
-
             this.btnReporty.Name = "btnReporty";
             this.btnReporty.Size = new System.Drawing.Size(165, 65);
             this.btnReporty.TabIndex = 1;
@@ -108,17 +104,13 @@
             // cmbCourse
             // 
             this.cmbCourse.FormattingEnabled = true;
-
-            this.cmbCourse.Location = new System.Drawing.Point(593, 290);
-
             this.cmbCourse.Items.AddRange(new object[] {
             "Data Science",
             "Programming",
             "Cyber Security",
             "Tech Support",
             "Graphic Design"});
-            this.cmbCourse.Location = new System.Drawing.Point(626, 285);
-
+            this.cmbCourse.Location = new System.Drawing.Point(593, 290);
             this.cmbCourse.Name = "cmbCourse";
             this.cmbCourse.Size = new System.Drawing.Size(195, 21);
             this.cmbCourse.TabIndex = 4;
@@ -184,7 +176,7 @@
             this.cmbCategorySortBy.FormattingEnabled = true;
             this.cmbCategorySortBy.Location = new System.Drawing.Point(43, 20);
             this.cmbCategorySortBy.Name = "cmbCategorySortBy";
-            this.cmbCategorySortBy.Size = new System.Drawing.Size(190, 21);
+            this.cmbCategorySortBy.Size = new System.Drawing.Size(197, 21);
             this.cmbCategorySortBy.TabIndex = 13;
             this.cmbCategorySortBy.SelectedIndexChanged += new System.EventHandler(this.cmbCategorySortBy_SelectedIndexChanged);
             // 
@@ -202,7 +194,7 @@
             // radDescending
             // 
             this.radDescending.AutoSize = true;
-            this.radDescending.Location = new System.Drawing.Point(151, 47);
+            this.radDescending.Location = new System.Drawing.Point(158, 47);
             this.radDescending.Name = "radDescending";
             this.radDescending.Size = new System.Drawing.Size(82, 17);
             this.radDescending.TabIndex = 7;
@@ -313,7 +305,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);

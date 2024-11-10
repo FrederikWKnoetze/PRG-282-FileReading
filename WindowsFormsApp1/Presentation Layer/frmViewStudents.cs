@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -226,7 +227,40 @@ namespace WindowsFormsApp1.Presentation_Layer
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
+            //print datagrid
+            PrintDocument printDocument = new PrintDocument();
+            printDocument.PrintPage += PrintDocument_PrintPage;
+            PrintDialog printDialog = new PrintDialog
+            {
+                Document = printDocument
+            };
+            if (printDialog.ShowDialog()==DialogResult.OK)
+            {
+                printDocument.Print();
+            }
 
+
+
+        }
+        private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            //graphics for how the print looks
+            Graphics g = e.Graphics;
+            Font font = new Font("Arial", 12);
+            float lineheight = font.GetHeight() + 2;
+            float x = e.MarginBounds.Left;
+            float y = e.MarginBounds.Top;
+
+            for (int i = 0; i < dgvViewStudents.RowCount; i++)
+            {
+                for (global::System.Int32 j = 0; j < dgvViewStudents.ColumnCount; j++)
+                {
+                    string cellvalue = dgvViewStudents[j, i].Value?.ToString() ?? "";
+                    g.DrawString(cellvalue, font,Brushes.Black,x+j*100,y);
+                }
+                y+= lineheight;
+            }
+            e.HasMorePages = false;
         }
 
         private void btnReporty_Click(object sender, EventArgs e)

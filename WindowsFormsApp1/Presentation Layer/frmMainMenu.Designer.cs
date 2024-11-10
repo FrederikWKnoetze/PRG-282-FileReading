@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainMenu));
             this.btnViewStudents = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -38,9 +39,9 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.lblMenu = new System.Windows.Forms.Label();
-            this.lblDate = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblMenu = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -62,7 +63,6 @@
             // 
             // panel1
             // 
-
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnViewStudents);
             this.panel1.Location = new System.Drawing.Point(130, 177);
@@ -72,18 +72,15 @@
             // 
             // panel2
             // 
-
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.btnAdd);
             this.panel2.Location = new System.Drawing.Point(483, 177);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(171, 68);
             this.panel2.TabIndex = 6;
-
             // 
             // btnAdd
             // 
-
             this.btnAdd.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Location = new System.Drawing.Point(-29, -15);
             this.btnAdd.Name = "btnAdd";
@@ -135,7 +132,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.Turquoise;
+            this.panel5.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.panel5.Controls.Add(this.lblTime);
             this.panel5.Controls.Add(this.lblDate);
             this.panel5.Controls.Add(this.lblMenu);
@@ -144,26 +141,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(800, 89);
             this.panel5.TabIndex = 9;
-            // 
-            // lblMenu
-            // 
-            this.lblMenu.AutoSize = true;
-            this.lblMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMenu.Location = new System.Drawing.Point(327, 29);
-            this.lblMenu.Name = "lblMenu";
-            this.lblMenu.Size = new System.Drawing.Size(155, 31);
-            this.lblMenu.TabIndex = 0;
-            this.lblMenu.Text = "Main Menu";
-            // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Cascadia Code", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.Location = new System.Drawing.Point(3, 36);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(56, 25);
-            this.lblDate.TabIndex = 1;
-            this.lblDate.Text = "Date";
             // 
             // lblTime
             // 
@@ -175,6 +152,26 @@
             this.lblTime.TabIndex = 2;
             this.lblTime.Text = "Time";
             // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Cascadia Code", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.Location = new System.Drawing.Point(3, 36);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(56, 25);
+            this.lblDate.TabIndex = 1;
+            this.lblDate.Text = "Date";
+            // 
+            // lblMenu
+            // 
+            this.lblMenu.AutoSize = true;
+            this.lblMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMenu.Location = new System.Drawing.Point(327, 29);
+            this.lblMenu.Name = "lblMenu";
+            this.lblMenu.Size = new System.Drawing.Size(155, 31);
+            this.lblMenu.TabIndex = 0;
+            this.lblMenu.Text = "Main Menu";
+            // 
             // timer1
             // 
             this.timer1.Enabled = true;
@@ -185,6 +182,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);

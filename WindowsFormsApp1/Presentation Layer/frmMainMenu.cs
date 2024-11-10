@@ -26,6 +26,9 @@ namespace WindowsFormsApp1
             this.Hide();
             frmDeleteStudent frmDeleteStudent = new frmDeleteStudent();
             frmDeleteStudent.ShowDialog();
+
+            lblDate.Text = DateTime.Now.ToShortDateString();
+            lblTime.Text = DateTime.Now.ToString("HH:mm:ss");
         }
 
         private void btnViewStudents_Click(object sender, EventArgs e)
@@ -33,6 +36,33 @@ namespace WindowsFormsApp1
             this.Hide();
             frmViewStudents frmViewStudent = new frmViewStudents();
             frmViewStudent.ShowDialog();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblDate.Text = DateTime.Now.ToShortDateString();
+            lblTime.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmAddStudent frmAddStudent = new frmAddStudent();
+            frmAddStudent.ShowDialog();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmUpdateStudent frmUpdateStudent = new frmUpdateStudent();
+            frmUpdateStudent.ShowDialog();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmDeleteStudent frmDeleteStudent = new frmDeleteStudent();
+            frmDeleteStudent.ShowDialog();
         }
     }
 }

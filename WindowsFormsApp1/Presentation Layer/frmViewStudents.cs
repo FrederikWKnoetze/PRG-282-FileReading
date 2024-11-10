@@ -31,6 +31,9 @@ namespace WindowsFormsApp1.Presentation_Layer
             studentTable.Columns.Add("Surname");
             studentTable.Columns.Add("Age");
             studentTable.Columns.Add("Course");
+
+            lblDate.Text = DateTime.Now.ToShortDateString();
+            lblTime.Text = DateTime.Now.ToString("HH:mm:ss");
         }
 
         public void LoadData()
@@ -208,6 +211,12 @@ namespace WindowsFormsApp1.Presentation_Layer
             {
                 dgvViewStudents.Sort(dgvViewStudents.Columns["Course"], ListSortDirection.Descending);
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblDate.Text = DateTime.Now.ToShortDateString();
+            lblTime.Text = DateTime.Now.ToString("HH:mm:ss");
         }
     }
 }

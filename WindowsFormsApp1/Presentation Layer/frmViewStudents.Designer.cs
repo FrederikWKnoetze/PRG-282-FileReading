@@ -300,7 +300,7 @@
             // lblAvgAge
             // 
             this.lblAvgAge.AutoSize = true;
-            this.lblAvgAge.Location = new System.Drawing.Point(442, 387);
+            this.lblAvgAge.Location = new System.Drawing.Point(437, 387);
             this.lblAvgAge.Name = "lblAvgAge";
             this.lblAvgAge.Size = new System.Drawing.Size(68, 13);
             this.lblAvgAge.TabIndex = 21;
@@ -308,16 +308,16 @@
             // 
             // edtAvgAge
             // 
-            this.edtAvgAge.Location = new System.Drawing.Point(440, 410);
+            this.edtAvgAge.Location = new System.Drawing.Point(435, 410);
             this.edtAvgAge.Name = "edtAvgAge";
-            this.edtAvgAge.Size = new System.Drawing.Size(80, 20);
+            this.edtAvgAge.Size = new System.Drawing.Size(70, 20);
             this.edtAvgAge.TabIndex = 22;
             // 
             // edtNumOfStudents
             // 
-            this.edtNumOfStudents.Location = new System.Drawing.Point(341, 410);
+            this.edtNumOfStudents.Location = new System.Drawing.Point(346, 410);
             this.edtNumOfStudents.Name = "edtNumOfStudents";
-            this.edtNumOfStudents.Size = new System.Drawing.Size(80, 20);
+            this.edtNumOfStudents.Size = new System.Drawing.Size(75, 20);
             this.edtNumOfStudents.TabIndex = 24;
             // 
             // lblNumOfStudents
@@ -325,9 +325,9 @@
             this.lblNumOfStudents.AutoSize = true;
             this.lblNumOfStudents.Location = new System.Drawing.Point(343, 387);
             this.lblNumOfStudents.Name = "lblNumOfStudents";
-            this.lblNumOfStudents.Size = new System.Drawing.Size(101, 13);
+            this.lblNumOfStudents.Size = new System.Drawing.Size(86, 13);
             this.lblNumOfStudents.TabIndex = 23;
-            this.lblNumOfStudents.Text = "Number of Students";
+            this.lblNumOfStudents.Text = "Num of Students";
             // 
             // btnReporty
             // 

@@ -218,7 +218,7 @@ namespace WindowsFormsApp1.Data_Layer
                 }
                 for (global::System.Int32 i = 0; i < newLines.Count; i++)
                 {
-                    if (newLines[i][1] == oldStudentID)
+                    if (newLines[i][0] == oldStudentID)
                     {
                         newLines.RemoveAt(i);
 
@@ -231,9 +231,17 @@ namespace WindowsFormsApp1.Data_Layer
                     string templine="";
                     for (global::System.Int32 j = 0; j < newLines[i].Length; j++)
                     {
-                        templine+=","+newLines[i][j];
+                        if (j== newLines[i].Length-1)
+                        {
+                            templine += newLines[i][j];
+                        }
+                        else
+                        {
+                            templine += newLines[i][j] + ",";
+                        }
+                        
                     }
-                    templine += "\n";
+                    //templine += "\n";
                     updatedlines.Add(templine);
                 }
 
@@ -248,6 +256,8 @@ namespace WindowsFormsApp1.Data_Layer
                 File.WriteAllLines(filePath, updatedlines);
 
                 MessageBox.Show("Student information updated successfully.");
+
+
             }
             catch (Exception ex)
             {

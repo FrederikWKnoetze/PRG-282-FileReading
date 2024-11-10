@@ -75,7 +75,7 @@ namespace WindowsFormsApp1.Presentation_Layer
                 // If no cell is selected, show a warning message
                 MessageBox.Show("Please select a cell to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
+            LoadData();
         }
 
         private void frmDeleteStudent_FormClosing(object sender, FormClosingEventArgs e)
@@ -112,6 +112,7 @@ namespace WindowsFormsApp1.Presentation_Layer
 
         public void LoadData()
         {
+            studentTable.Clear();
             if (File.Exists(filePath))
             {
                 using (StreamReader reader = new StreamReader(filePath))

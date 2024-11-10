@@ -47,6 +47,7 @@ namespace WindowsFormsApp1.Presentation_Layer
             string Age = edtAge.Text;
             string Course = cmbCourse.Text;
             dataHandler.updateInfo(oldID, newID, Name, Surname, Age, Course);
+            LoadData();
         }
 
         private void frmUpdateStudent_Load(object sender, EventArgs e)
@@ -83,6 +84,7 @@ namespace WindowsFormsApp1.Presentation_Layer
 
         public void LoadData()
         {
+            studentTable.Clear();
             if (File.Exists(filePath))
             {
                 using (StreamReader reader = new StreamReader(filePath))

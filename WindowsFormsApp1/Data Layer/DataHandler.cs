@@ -16,32 +16,48 @@ namespace WindowsFormsApp1.Data_Layer
     {
         public void CreateFile()
         {
-            string startdata = "6666,Sannie,Koen,21,Data Science\n4444,Piet,Pompies,22,Programming\n1111,Gerhared,Raugh,20,Cyber Security\n2222,Liam,Kaiser,20,Tech Support\n3333,Janie,Knoetze,24,Graphic Design";
+            //
+            //dumma data if file does not exsist or is empty
+            string startdata = "6666,Sannie,Koen,21,Data Science\n4444,Piet,Pompies,22,Programming\n1111,Gerhared,Raugh,20,Cyber Security\n2222,Liam,Kaiser,20,Tech Support\n3333,Janie,Knoetze,24,Graphic Design\n";
             try
             {
-                FileStream fs = new FileStream(filePath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
+               // MessageBox.Show("working");
+                //if file exsists and is empty fill with data
+                
                 if (File.Exists(filePath)==true)
                 {
-                    using (StreamWriter sw = new StreamWriter(fs))
+                    //MessageBox.Show("working");
+                    //checks is file is emty if so write start data
+                    if ((File.ReadAllText(filePath)=="")||(File.ReadAllText(filePath) == null))
                     {
-                        sw.Write(startdata);
+                        using (FileStream fs = new FileStream(filePath, FileMode.OpenOrCreate, FileAccess.ReadWrite))
+                        {
+                            using (StreamWriter sw = new StreamWriter(fs))
+                            {
+                               // MessageBox.Show("working");
+                                sw.Write(startdata);
+                            }
+                        }
                     }
-
                 }
                 else
                 {
-                    using (StreamWriter sw = new StreamWriter(fs))
+                    using (FileStream fs = new FileStream(filePath, FileMode.OpenOrCreate, FileAccess.ReadWrite))
                     {
-                        sw.Write(startdata);
+                        using (StreamWriter sw = new StreamWriter(fs))
+                        {
+                            sw.Write(startdata);
+                        }
                     }
-
+                    
+                    //writes start data if file emty
                     //Data Science
                     //Programming
                     //Cyber Security
                     //Tech Support
                     //Graphic Design
                 }
-                fs.Close();
+               
             }
             catch (Exception ex)
             {
@@ -193,18 +209,55 @@ namespace WindowsFormsApp1.Data_Layer
                 var lines = File.ReadAllLines(filePath).ToList();
 
                 // Find the line with the oldStudentID and remove it
-                lines.RemoveAll(line => line.Split(',')[0] == oldStudentID);
+                //lines.RemoveAll(line => line.Split(',')[0] == oldStudentID);
+
+                List<string[]> newLines = new List<string[]>();
+                foreach (var item in lines)
+                {
+                    newLines.Add(item.Split(','));
+                }
+                for (global::System.Int32 i = 0; i < newLines.Count; i++)
+                {
+                    if (newLines[i][0] == oldStudentID)
+                    {
+                        newLines.RemoveAt(i);
+
+                    }
+                }
+
+                List<string> updatedlines = new List<string>();
+                for (global::System.Int32 i = 0; i < newLines.Count; i++)
+                {
+                    string templine="";
+                    for (global::System.Int32 j = 0; j < newLines[i].Length; j++)
+                    {
+                        if (j== newLines[i].Length-1)
+                        {
+                            templine += newLines[i][j];
+                        }
+                        else
+                        {
+                            templine += newLines[i][j] + ",";
+                        }
+                        
+                    }
+                    //templine += "\n";
+                    updatedlines.Add(templine);
+                }
 
                 // Create the new student data line
                 string updatedStudentData = $"{newStudentID},{name},{surname},{age},{course}";
+                updatedlines.Add(updatedStudentData);
 
                 // Add the updated line to the list
                 lines.Add(updatedStudentData);
 
                 // Write all lines back to the file
-                File.WriteAllLines(filePath, lines);
+                File.WriteAllLines(filePath, updatedlines);
 
                 MessageBox.Show("Student information updated successfully.");
+
+
             }
             catch (Exception ex)
             {

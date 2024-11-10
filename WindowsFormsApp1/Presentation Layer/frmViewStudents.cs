@@ -318,7 +318,6 @@ namespace WindowsFormsApp1.Presentation_Layer
             this.Hide();
             frmMainMenu frmMainMenu = new frmMainMenu();
             frmMainMenu.ShowDialog();
-
         }
     }
 }

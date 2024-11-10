@@ -46,6 +46,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnback = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -215,11 +216,23 @@
             this.panel1.Size = new System.Drawing.Size(137, 54);
             this.panel1.TabIndex = 19;
             // 
+            // btnback
+            // 
+            this.btnback.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnback.Location = new System.Drawing.Point(727, 404);
+            this.btnback.Name = "btnback";
+            this.btnback.Size = new System.Drawing.Size(61, 34);
+            this.btnback.TabIndex = 20;
+            this.btnback.Text = "Back";
+            this.btnback.UseVisualStyleBackColor = true;
+            this.btnback.Click += new System.EventHandler(this.btnback_Click);
+            // 
             // frmAddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnback);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.lblAge);
@@ -265,6 +278,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel1;
-
+        private System.Windows.Forms.Button btnback;
     }
 }

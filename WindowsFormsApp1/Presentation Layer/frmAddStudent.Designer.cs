@@ -39,6 +39,7 @@
             this.edtAge = new System.Windows.Forms.TextBox();
             this.lblSurname = new System.Windows.Forms.Label();
             this.edtSurname = new System.Windows.Forms.TextBox();
+            this.btnback = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSubmit
@@ -138,11 +139,22 @@
             this.edtSurname.Size = new System.Drawing.Size(100, 20);
             this.edtSurname.TabIndex = 3;
             // 
+            // btnback
+            // 
+            this.btnback.Location = new System.Drawing.Point(12, 12);
+            this.btnback.Name = "btnback";
+            this.btnback.Size = new System.Drawing.Size(61, 34);
+            this.btnback.TabIndex = 18;
+            this.btnback.Text = "Back";
+            this.btnback.UseVisualStyleBackColor = true;
+            this.btnback.Click += new System.EventHandler(this.btnback_Click);
+            // 
             // frmAddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnback);
             this.Controls.Add(this.lblAge);
             this.Controls.Add(this.edtAge);
             this.Controls.Add(this.lblCourse);
@@ -176,5 +188,6 @@
         private System.Windows.Forms.TextBox edtAge;
         private System.Windows.Forms.Label lblSurname;
         private System.Windows.Forms.TextBox edtSurname;
+        private System.Windows.Forms.Button btnback;
     }
 }

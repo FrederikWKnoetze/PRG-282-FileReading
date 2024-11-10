@@ -304,5 +304,12 @@ namespace WindowsFormsApp1.Presentation_Layer
                 throw;
             }
         }
+
+        private void btnback_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmMainMenu frmMainMenu = new frmMainMenu();
+            frmMainMenu.ShowDialog();
+        }
     }
 }

@@ -41,7 +41,7 @@ namespace WindowsFormsApp1.Presentation_Layer
         {
             DataHandler dataHandler = new DataHandler();
             string oldID = edtSearchID.Text;
-            string newID = edtSearchID.Text;
+            string newID = edtID.Text;
             string Name = edtName.Text;
             string Surname = edtSurname.Text;
             string Age = edtAge.Text;

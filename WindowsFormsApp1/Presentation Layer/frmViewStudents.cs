@@ -32,9 +32,6 @@ namespace WindowsFormsApp1.Presentation_Layer
             studentTable.Columns.Add("Surname");
             studentTable.Columns.Add("Age");
             studentTable.Columns.Add("Course");
-
-            lblDate.Text = DateTime.Now.ToShortDateString();
-            lblTime.Text = DateTime.Now.ToString("HH:mm:ss");
         }
 
         public void LoadData()
@@ -87,7 +84,8 @@ namespace WindowsFormsApp1.Presentation_Layer
 
         private void frmViewStudents_Load(object sender, EventArgs e)
         {
-
+            lblDate.Text = DateTime.Now.ToShortDateString();
+            lblTime.Text = DateTime.Now.ToString("HH:mm:ss");
         }
 
         private void txtName_TextChanged(object sender, EventArgs e)

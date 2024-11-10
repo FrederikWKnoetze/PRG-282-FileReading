@@ -233,6 +233,32 @@ namespace WindowsFormsApp1.Presentation_Layer
         {
             try
             {
+                string output;
+                output = "Summary Report\n";
+                string rowcount=dgvViewStudents.Rows.Count.ToString();
+                output += $"Number of Students:{rowcount}\n";
+                int avgage = 0;
+                int count = 0;
+
+                //count and break is here beacause the is 6? rows and it breaks
+                foreach (DataGridViewRow row in dgvViewStudents.Rows)
+                {
+                    if (count==5)
+                    {
+                        break;
+                    }
+                    avgage += int.Parse(row.Cells[3].Value.ToString());
+                    count++;
+                }
+                avgage = avgage / int.Parse(rowcount);
+                output += $"Average age: {avgage.ToString()}\n";
+
+                using (StreamWriter sr = new StreamWriter("summary.txt"))
+                {
+                    sr.Write(output);
+                }
+
+                MessageBox.Show("Summary saved to file");
 
             }
             catch (Exception ex)

@@ -45,6 +45,7 @@ namespace WindowsFormsApp1.Presentation_Layer
         {
             lblDate.Text = DateTime.Now.ToShortDateString();
             lblTime.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
 
         private void frmAddStudent_FormClosing(object sender, FormClosingEventArgs e)
         {

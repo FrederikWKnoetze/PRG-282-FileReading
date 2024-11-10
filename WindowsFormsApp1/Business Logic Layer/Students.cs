@@ -9,6 +9,7 @@ using WindowsFormsApp1.Presentation_Layer;
 using System.Security.Cryptography.X509Certificates;
 using System.Data;
 using System.IO;
+using System.Windows.Forms;
 
 namespace WindowsFormsApp1.Business_Logic_Layer
 {
@@ -28,20 +29,21 @@ namespace WindowsFormsApp1.Business_Logic_Layer
             this.Age = _age;
             this.Course = _course;
         }
-        public void ValidateStudent()
+        public void ValidateStudent(frmAddStudent frmAddStudents)
         {
             bool IDflag = true;
             bool Nameflag = true;
             bool Surnameflag = true;
             bool Ageflag = true;
-            bool Courseflag = true;
-            string numbers = "0123456789";
+            bool Courseflag = false;
+            string[] courses = { "Data Science", "Programming", "Cyber Security", "Tech Support", "Graphic Design" };
             if (StudentID.Length == 6)
             {
                 for (int i = 0; i < StudentID.Length; i++)
                 {
                     if (!char.IsDigit(StudentID[i])) // Check if the character is not a digit
                     {
+                        frmAddStudents.IDBorder();
                         IDflag = false; // If not a digit, set the flag to false
                         break; // Exit the loop early since we already found a non-digit
                     }
@@ -49,6 +51,7 @@ namespace WindowsFormsApp1.Business_Logic_Layer
             }
             else
             {
+                frmAddStudents.IDBorder();
                 IDflag = false;
             }
             if (Name.Length >= 2)
@@ -57,6 +60,7 @@ namespace WindowsFormsApp1.Business_Logic_Layer
                 {
                     if (!char.IsLetter(Name[i]))
                     {
+                        frmAddStudents.NameBorder();
                         Nameflag = false;
                         break; // Exit the loop early since we already found an invalid character
                     }
@@ -64,6 +68,7 @@ namespace WindowsFormsApp1.Business_Logic_Layer
             }
             else
             {
+                frmAddStudents.NameBorder();
                 Nameflag = false; // If the name is too short, flag it as invalid
             }
 
@@ -73,6 +78,7 @@ namespace WindowsFormsApp1.Business_Logic_Layer
                 {
                     if (!char.IsLetter(Surname[i]))
                     {
+                        frmAddStudents.SurnameBorder();
                         Surnameflag = false;
                         break; // Exit the loop early since we already found an invalid character
                     }
@@ -80,11 +86,26 @@ namespace WindowsFormsApp1.Business_Logic_Layer
             }
             else
             {
+                frmAddStudents.SurnameBorder();
                 Surnameflag = false; // If the Surname is too short, flag it as invalid
             }
+
             if (Age < 14 || Age > 100) // Age should be between 16 and 100
             {
+                frmAddStudents.AgeBorder();
                 Ageflag = false;
+            }
+            for (int i = 0; i < courses.Length; i++)
+            {
+                if (courses[i] == Course)
+                {
+                    Courseflag = true;
+                    break;
+                }
+            }
+            if(Courseflag == false)
+            {
+                frmAddStudents.CourseBorder();
             }
             if ((Nameflag == true) && (Surnameflag == true) && (Courseflag == true) && (Ageflag == true) && (IDflag == true))
             {

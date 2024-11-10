@@ -27,7 +27,7 @@ namespace WindowsFormsApp1.Presentation_Layer
             string studentCourse = cmbCourse.Text;
 
             Students test = new Students(studentID,studentName,studentSurname,age,studentCourse);
-            test.ValidateStudent();
+            test.ValidateStudent(this);
         }
         public void Message(string message)
         {
@@ -66,6 +66,26 @@ namespace WindowsFormsApp1.Presentation_Layer
             this.Hide();
             frmMainMenu frmMainMenu = new frmMainMenu();
             frmMainMenu.ShowDialog();
+        }
+        public void IDBorder()
+        {
+            pnlID.BackColor = Color.Red;
+        }
+        public void NameBorder()
+        {
+            pnlName.BackColor = Color.Red;
+        }
+        public void SurnameBorder()
+        {
+            pnlSurname.BackColor = Color.Red;
+        }
+        public void AgeBorder()
+        {
+            pnlAge.BackColor = Color.Red;
+        }
+        public void CourseBorder()
+        {
+            pnlCourse.BackColor = Color.Red;
         }
     }
 }

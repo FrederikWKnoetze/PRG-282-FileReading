@@ -297,6 +297,8 @@ namespace WindowsFormsApp1.Presentation_Layer
                 }
                 avgage = avgage / int.Parse(rowcount);
                 output += $"Average age: {avgage.ToString()}\n";
+                edtAvgAge.Text = avgage.ToString();
+                edtNumOfStudents.Text = rowcount;
 
                 using (StreamWriter sr = new StreamWriter("summary.txt"))
                 {
@@ -319,5 +321,6 @@ namespace WindowsFormsApp1.Presentation_Layer
             frmMainMenu frmMainMenu = new frmMainMenu();
             frmMainMenu.ShowDialog();
         }
+
     }
 }

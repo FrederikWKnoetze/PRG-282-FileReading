@@ -211,6 +211,7 @@ namespace WindowsFormsApp1.Data_Layer
                 // Find the line with the oldStudentID and remove it
                 //lines.RemoveAll(line => line.Split(',')[0] == oldStudentID);
 
+                //splta data in list of string arrays
                 List<string[]> newLines = new List<string[]>();
                 foreach (var item in lines)
                 {
@@ -225,6 +226,8 @@ namespace WindowsFormsApp1.Data_Layer
                     }
                 }
 
+
+                //makes the new updated lines
                 List<string> updatedlines = new List<string>();
                 for (global::System.Int32 i = 0; i < newLines.Count; i++)
                 {

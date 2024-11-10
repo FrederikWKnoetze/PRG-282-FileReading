@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvViewStudents = new System.Windows.Forms.DataGridView();
-            this.btnReporty = new System.Windows.Forms.Button();
             this.lblParamaters = new System.Windows.Forms.Label();
             this.btnPrint = new System.Windows.Forms.Button();
             this.cmbCourse = new System.Windows.Forms.ComboBox();
@@ -52,14 +51,19 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblView = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnback = new System.Windows.Forms.Button();
+            this.lblAvgAge = new System.Windows.Forms.Label();
+            this.edtAvgAge = new System.Windows.Forms.TextBox();
+            this.edtNumOfStudents = new System.Windows.Forms.TextBox();
+            this.lblNumOfStudents = new System.Windows.Forms.Label();
+            this.btnReporty = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewStudents)).BeginInit();
             this.grpSortBy.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvViewStudents
@@ -69,17 +73,6 @@
             this.dgvViewStudents.Name = "dgvViewStudents";
             this.dgvViewStudents.Size = new System.Drawing.Size(489, 281);
             this.dgvViewStudents.TabIndex = 0;
-            // 
-            // btnReporty
-            // 
-            this.btnReporty.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReporty.Location = new System.Drawing.Point(-3, -4);
-            this.btnReporty.Name = "btnReporty";
-            this.btnReporty.Size = new System.Drawing.Size(165, 65);
-            this.btnReporty.TabIndex = 1;
-            this.btnReporty.Text = "Generate Summary Report";
-            this.btnReporty.UseVisualStyleBackColor = true;
-            this.btnReporty.Click += new System.EventHandler(this.btnReporty_Click);
             // 
             // lblParamaters
             // 
@@ -285,18 +278,10 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnReporty);
-            this.panel1.Location = new System.Drawing.Point(42, 385);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(157, 53);
-            this.panel1.TabIndex = 18;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btnPrint);
-            this.panel2.Location = new System.Drawing.Point(298, 385);
+            this.panel2.Location = new System.Drawing.Point(180, 385);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(157, 53);
             this.panel2.TabIndex = 19;
@@ -312,11 +297,66 @@
             this.btnback.UseVisualStyleBackColor = true;
             this.btnback.Click += new System.EventHandler(this.btnback_Click);
             // 
+            // lblAvgAge
+            // 
+            this.lblAvgAge.AutoSize = true;
+            this.lblAvgAge.Location = new System.Drawing.Point(442, 387);
+            this.lblAvgAge.Name = "lblAvgAge";
+            this.lblAvgAge.Size = new System.Drawing.Size(68, 13);
+            this.lblAvgAge.TabIndex = 21;
+            this.lblAvgAge.Text = "Average age";
+            // 
+            // edtAvgAge
+            // 
+            this.edtAvgAge.Location = new System.Drawing.Point(440, 410);
+            this.edtAvgAge.Name = "edtAvgAge";
+            this.edtAvgAge.Size = new System.Drawing.Size(80, 20);
+            this.edtAvgAge.TabIndex = 22;
+            // 
+            // edtNumOfStudents
+            // 
+            this.edtNumOfStudents.Location = new System.Drawing.Point(341, 410);
+            this.edtNumOfStudents.Name = "edtNumOfStudents";
+            this.edtNumOfStudents.Size = new System.Drawing.Size(80, 20);
+            this.edtNumOfStudents.TabIndex = 24;
+            // 
+            // lblNumOfStudents
+            // 
+            this.lblNumOfStudents.AutoSize = true;
+            this.lblNumOfStudents.Location = new System.Drawing.Point(343, 387);
+            this.lblNumOfStudents.Name = "lblNumOfStudents";
+            this.lblNumOfStudents.Size = new System.Drawing.Size(101, 13);
+            this.lblNumOfStudents.TabIndex = 23;
+            this.lblNumOfStudents.Text = "Number of Students";
+            // 
+            // btnReporty
+            // 
+            this.btnReporty.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporty.Location = new System.Drawing.Point(-3, -4);
+            this.btnReporty.Name = "btnReporty";
+            this.btnReporty.Size = new System.Drawing.Size(165, 65);
+            this.btnReporty.TabIndex = 1;
+            this.btnReporty.Text = "Generate Summary Report";
+            this.btnReporty.UseVisualStyleBackColor = true;
+            this.btnReporty.Click += new System.EventHandler(this.btnReporty_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnReporty);
+            this.panel1.Location = new System.Drawing.Point(12, 385);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(157, 53);
+            this.panel1.TabIndex = 18;
+            // 
             // frmViewStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.edtNumOfStudents);
+            this.Controls.Add(this.lblNumOfStudents);
+            this.Controls.Add(this.edtAvgAge);
+            this.Controls.Add(this.lblAvgAge);
             this.Controls.Add(this.btnback);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -344,8 +384,8 @@
             this.grpSortBy.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -354,7 +394,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvViewStudents;
-        private System.Windows.Forms.Button btnReporty;
         private System.Windows.Forms.Label lblParamaters;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.ComboBox cmbCourse;
@@ -376,8 +415,13 @@
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label lblView;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnback;
+        private System.Windows.Forms.Label lblAvgAge;
+        private System.Windows.Forms.TextBox edtAvgAge;
+        private System.Windows.Forms.TextBox edtNumOfStudents;
+        private System.Windows.Forms.Label lblNumOfStudents;
+        private System.Windows.Forms.Button btnReporty;
+        private System.Windows.Forms.Panel panel1;
     }
 }

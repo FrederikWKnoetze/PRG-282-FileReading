@@ -32,6 +32,9 @@ namespace WindowsFormsApp1.Presentation_Layer
             studentTable.Columns.Add("Surname");
             studentTable.Columns.Add("Age");
             studentTable.Columns.Add("Course");
+
+            lblDate.Text = DateTime.Now.ToShortDateString();
+            lblTime.Text = DateTime.Now.ToString("HH:mm:ss");
         }
 
         public void LoadData()
@@ -211,6 +214,12 @@ namespace WindowsFormsApp1.Presentation_Layer
             }
         }
 
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblDate.Text = DateTime.Now.ToShortDateString();
+            lblTime.Text = DateTime.Now.ToString("HH:mm:ss");
+
         private void frmViewStudents_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Do you really want to exit?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Hand);
@@ -310,6 +319,7 @@ namespace WindowsFormsApp1.Presentation_Layer
             this.Hide();
             frmMainMenu frmMainMenu = new frmMainMenu();
             frmMainMenu.ShowDialog();
+
         }
     }
 }

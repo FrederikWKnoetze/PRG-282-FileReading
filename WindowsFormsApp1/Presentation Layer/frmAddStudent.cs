@@ -34,6 +34,18 @@ namespace WindowsFormsApp1.Presentation_Layer
             MessageBox.Show(message);
         }
 
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblDate.Text = DateTime.Now.ToShortDateString();
+            lblTime.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+
+        private void frmAddStudent_Load(object sender, EventArgs e)
+        {
+            lblDate.Text = DateTime.Now.ToShortDateString();
+            lblTime.Text = DateTime.Now.ToString("HH:mm:ss");
+
         private void frmAddStudent_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Do you really want to exit?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Hand);
@@ -53,6 +65,7 @@ namespace WindowsFormsApp1.Presentation_Layer
             this.Hide();
             frmMainMenu frmMainMenu = new frmMainMenu();
             frmMainMenu.ShowDialog();
+
         }
     }
 }

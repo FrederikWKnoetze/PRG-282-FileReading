@@ -23,8 +23,17 @@ namespace WindowsFormsApp1
 
         private void frmMainMenu_Load(object sender, EventArgs e)
         {
+
+            this.Hide();
+            frmDeleteStudent frmDeleteStudent = new frmDeleteStudent();
+            frmDeleteStudent.ShowDialog();
+
+            lblDate.Text = DateTime.Now.ToShortDateString();
+            lblTime.Text = DateTime.Now.ToString("HH:mm:ss");
+
             DataHandler dataHandler = new DataHandler();
             dataHandler.CreateFile();
+
         }
 
         private void btnViewStudents_Click(object sender, EventArgs e)
@@ -34,26 +43,36 @@ namespace WindowsFormsApp1
             frmViewStudent.ShowDialog();
         }
 
-        private void btnAddStudent_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblDate.Text = DateTime.Now.ToShortDateString();
+            lblTime.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+
         {
             this.Hide();
             frmAddStudent frmAddStudent = new frmAddStudent();
             frmAddStudent.ShowDialog();
         }
 
-        private void btnUpdateStudent_Click(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
             this.Hide();
             frmUpdateStudent frmUpdateStudent = new frmUpdateStudent();
             frmUpdateStudent.ShowDialog();
         }
 
-        private void btnDeleteStudent_Click(object sender, EventArgs e)
+
+        private void btnDelete_Click(object sender, EventArgs e)
         {
             this.Hide();
             frmDeleteStudent frmDeleteStudent = new frmDeleteStudent();
             frmDeleteStudent.ShowDialog();
         }
+
+
 
         private void frmMainMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -68,5 +87,6 @@ namespace WindowsFormsApp1
                 e.Cancel = true;
             }
         }
+
     }
 }

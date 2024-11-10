@@ -46,6 +46,7 @@
             this.lblID = new System.Windows.Forms.Label();
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.lblSurname = new System.Windows.Forms.Label();
+            this.btnback = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewStudents)).BeginInit();
             this.grpSortBy.SuspendLayout();
             this.SuspendLayout();
@@ -53,14 +54,14 @@
             // dgvViewStudents
             // 
             this.dgvViewStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvViewStudents.Location = new System.Drawing.Point(58, 38);
+            this.dgvViewStudents.Location = new System.Drawing.Point(71, 63);
             this.dgvViewStudents.Name = "dgvViewStudents";
             this.dgvViewStudents.Size = new System.Drawing.Size(389, 248);
             this.dgvViewStudents.TabIndex = 0;
             // 
             // btnReporty
             // 
-            this.btnReporty.Location = new System.Drawing.Point(58, 319);
+            this.btnReporty.Location = new System.Drawing.Point(71, 344);
             this.btnReporty.Name = "btnReporty";
             this.btnReporty.Size = new System.Drawing.Size(179, 56);
             this.btnReporty.TabIndex = 1;
@@ -79,7 +80,7 @@
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(268, 319);
+            this.btnPrint.Location = new System.Drawing.Point(281, 344);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(179, 56);
             this.btnPrint.TabIndex = 3;
@@ -222,11 +223,22 @@
             this.lblSurname.TabIndex = 15;
             this.lblSurname.Text = "Surname";
             // 
+            // btnback
+            // 
+            this.btnback.Location = new System.Drawing.Point(23, 12);
+            this.btnback.Name = "btnback";
+            this.btnback.Size = new System.Drawing.Size(61, 34);
+            this.btnback.TabIndex = 17;
+            this.btnback.Text = "Back";
+            this.btnback.UseVisualStyleBackColor = true;
+            this.btnback.Click += new System.EventHandler(this.btnback_Click);
+            // 
             // frmViewStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnback);
             this.Controls.Add(this.txtSurname);
             this.Controls.Add(this.lblSurname);
             this.Controls.Add(this.txtID);
@@ -275,5 +287,6 @@
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.Label lblSurname;
+        private System.Windows.Forms.Button btnback;
     }
 }
